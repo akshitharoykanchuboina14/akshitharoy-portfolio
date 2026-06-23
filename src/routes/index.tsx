@@ -5,6 +5,8 @@ import {
   GraduationCap, Briefcase, Award, Trophy, MapPin, ArrowRight, Sparkles,
 } from "lucide-react";
 import profileAsset from "@/assets/akshitha-profile.asset.json";
+import { SiReact, SiJavascript, SiHtml5, SiCss, SiGit, SiGithub, SiMongodb, SiExpress, SiNodedotjs, SiTailwindcss, SiPython, SiMysql } from "react-icons/si";
+import { FaJava } from "react-icons/fa";
 import objectDetectionImg from "@/assets/project-object-detection.jpg";
 import restaurantImg from "@/assets/project-restaurant.jpg";
 
@@ -80,27 +82,27 @@ function Hero() {
     <section id="top" className="relative overflow-hidden" style={{ background: "var(--gradient-hero)" }}>
       <div className="pointer-events-none absolute -top-24 -right-24 h-72 w-72 rounded-full bg-teal/20 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-sky/20 blur-3xl" />
-      <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 py-20 md:grid-cols-[1.2fr_1fr] md:py-28">
+      <div className="mx-auto grid max-w-6xl items-center gap-10 px-5 py-16 md:grid-cols-[1.25fr_1fr] md:gap-12 md:py-24">
         <div className="fade-up">
           <span className="inline-flex items-center gap-2 rounded-full border border-teal/30 bg-white/70 px-3 py-1 text-xs font-semibold text-teal backdrop-blur">
-            <Sparkles className="h-3.5 w-3.5" /> Available for opportunities
+            <Sparkles className="h-3.5 w-3.5" /> Open to Software Developer Internships
           </span>
-          <h1 className="mt-5 text-4xl font-extrabold leading-[1.05] text-primary sm:text-5xl md:text-6xl">
+          <h1 className="mt-5 text-[2.5rem] font-extrabold leading-[1.05] text-primary sm:text-5xl md:text-[3.75rem]">
             Akshitha Roy <br />
             <span className="bg-gradient-to-r from-teal to-sky bg-clip-text text-transparent">Kanchuboina</span>
           </h1>
-          <p className="mt-4 text-base font-semibold text-primary/80 sm:text-lg">
+          <p className="mt-4 text-base font-semibold uppercase tracking-wide text-primary/70 sm:text-lg">
             Computer Science Student <span className="text-teal">•</span> Full Stack Developer
           </p>
-          <p className="mt-5 max-w-xl text-foreground/80">
-            I build clean, responsive web applications with modern stacks — turning ideas into
-            fast, accessible products with thoughtful UI and reliable code.
+          <p className="mt-5 max-w-xl text-base leading-relaxed text-foreground/80 sm:text-lg">
+            I design and build clean, responsive web applications with React, JavaScript and modern
+            tooling — focused on shipping recruiter-ready, production-quality interfaces.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a href="#projects" className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-elegant transition-transform hover:-translate-y-0.5">
               View Projects <ArrowRight className="h-4 w-4" />
             </a>
-            <a href="/resume.pdf" className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-white px-5 py-3 text-sm font-semibold text-primary transition-colors hover:border-teal hover:text-teal">
+            <a href="/resume.pdf" download="Akshitha_Roy_Resume.pdf" className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-white px-5 py-3 text-sm font-semibold text-primary transition-colors hover:border-teal hover:text-teal">
               <Download className="h-4 w-4" /> Download Resume
             </a>
             <a href="#contact" className="inline-flex items-center gap-2 rounded-full bg-teal px-5 py-3 text-sm font-semibold text-teal-foreground shadow-soft transition-transform hover:-translate-y-0.5">
@@ -116,9 +118,9 @@ function Hero() {
                 <img
                   src={profileAsset.url}
                   alt="Akshitha Roy Kanchuboina"
-                  width={360}
-                  height={360}
-                  className="h-64 w-64 object-cover sm:h-80 sm:w-80"
+                  width={320}
+                  height={320}
+                  className="h-56 w-56 object-cover sm:h-64 sm:w-64 md:h-72 md:w-72"
                 />
               </div>
             </div>
@@ -150,10 +152,10 @@ function About() {
         <SectionTitle eyebrow="About" title="A bit about me" />
         <div className="mx-auto max-w-4xl rounded-3xl border border-border bg-card p-8 shadow-soft md:p-12" data-reveal>
           <p className="text-lg leading-relaxed text-foreground/80">
-            I'm a final-year <span className="font-semibold text-primary">Computer Science</span> student
-            passionate about building real-world software. My goal is to join a forward-thinking team
-            where I can apply my problem-solving mindset and full-stack skills to ship products users love —
-            while continuing to grow into a well-rounded engineer.
+            I'm a <span className="font-semibold text-primary">Computer Science</span> student and aspiring
+            full stack developer. I love turning ideas into clean, responsive web apps with React,
+            JavaScript and modern tools — and I'm actively seeking a <span className="font-semibold text-primary">software developer internship</span> where
+            I can contribute, learn fast, and grow into a well-rounded engineer.
           </p>
           <div className="mt-8 grid gap-4 sm:grid-cols-4">
             {[
@@ -438,6 +440,41 @@ function Footer() {
   );
 }
 
+const TECH_STACK = [
+  { Icon: SiReact, label: "React", color: "#61DAFB" },
+  { Icon: SiJavascript, label: "JavaScript", color: "#F7DF1E" },
+  { Icon: FaJava, label: "Java", color: "#E76F00" },
+  { Icon: SiPython, label: "Python", color: "#3776AB" },
+  { Icon: SiMysql, label: "SQL", color: "#4479A1" },
+  { Icon: SiHtml5, label: "HTML5", color: "#E34F26" },
+  { Icon: SiCss, label: "CSS3", color: "#1572B6" },
+  { Icon: SiTailwindcss, label: "Tailwind", color: "#06B6D4" },
+  { Icon: SiNodedotjs, label: "Node.js", color: "#5FA04E" },
+  { Icon: SiExpress, label: "Express", color: "#0F172A" },
+  { Icon: SiMongodb, label: "MongoDB", color: "#47A248" },
+  { Icon: SiGit, label: "Git", color: "#F05032" },
+  { Icon: SiGithub, label: "GitHub", color: "#0F172A" },
+];
+
+function TechStack() {
+  const ref = useReveal();
+  return (
+    <section className="section-pad" ref={ref}>
+      <div className="mx-auto max-w-6xl px-5">
+        <SectionTitle eyebrow="Tech Stack" title="Tools & technologies" desc="The stack I reach for when building modern web apps." />
+        <div className="grid grid-cols-3 gap-3 sm:grid-cols-4 sm:gap-4 md:grid-cols-6 lg:grid-cols-7" data-reveal>
+          {TECH_STACK.map(({ Icon, label, color }) => (
+            <div key={label} className="group flex flex-col items-center gap-2 rounded-2xl border border-border bg-card p-4 shadow-soft transition-all hover:-translate-y-1 hover:border-teal/40 hover:shadow-elegant">
+              <Icon className="h-8 w-8 transition-transform group-hover:scale-110" style={{ color }} />
+              <span className="text-xs font-semibold text-primary/80">{label}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Portfolio() {
   return (
     <div className="min-h-screen bg-background">
@@ -446,6 +483,7 @@ function Portfolio() {
         <Hero />
         <About />
         <Skills />
+        <TechStack />
         <Projects />
         <Education />
         <Experience />
