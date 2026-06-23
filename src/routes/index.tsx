@@ -5,7 +5,7 @@ import {
   GraduationCap, Briefcase, Award, Trophy, MapPin, ArrowRight, Sparkles,
 } from "lucide-react";
 import profileAsset from "@/assets/akshitha-profile.asset.json";
-import { SiReact, SiJavascript, SiHtml5, SiCss3, SiGit, SiGithub, SiMongodb, SiExpress, SiNodedotjs, SiTailwindcss, SiPython, SiMysql } from "react-icons/si";
+import { SiReact, SiJavascript, SiHtml5, SiCss, SiGit, SiGithub, SiMongodb, SiExpress, SiNodedotjs, SiTailwindcss, SiPython, SiMysql } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
 import objectDetectionImg from "@/assets/project-object-detection.jpg";
 import restaurantImg from "@/assets/project-restaurant.jpg";
