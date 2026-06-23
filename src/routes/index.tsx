@@ -85,7 +85,7 @@ function Hero() {
       <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 py-20 md:grid-cols-[1.2fr_1fr] md:py-28">
         <div className="fade-up">
           <span className="inline-flex items-center gap-2 rounded-full border border-teal/30 bg-white/70 px-3 py-1 text-xs font-semibold text-teal backdrop-blur">
-            <Sparkles className="h-3.5 w-3.5" /> Available for opportunities
+            <Sparkles className="h-3.5 w-3.5" /> Open to Software Developer Internships
           </span>
           <h1 className="mt-5 text-4xl font-extrabold leading-[1.05] text-primary sm:text-5xl md:text-6xl">
             Akshitha Roy <br />
