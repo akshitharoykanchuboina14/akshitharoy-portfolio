@@ -223,8 +223,8 @@ const PROJECTS = [
     demo: "#",
   },
   {
-    title: "Restaurant Website",
-    desc: "A modern, fully responsive restaurant landing site with menu, gallery and reservation UI.",
+    title: "Masala Magic",
+    desc: "A premium Indian restaurant website showcasing authentic North & South Indian cuisine, online reservations, and a digital menu with rich visuals.",
     img: restaurantImg,
     tech: ["HTML", "CSS", "JavaScript"],
     github: GITHUB,
