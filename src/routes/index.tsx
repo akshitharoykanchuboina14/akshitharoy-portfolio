@@ -440,6 +440,41 @@ function Footer() {
   );
 }
 
+const TECH_STACK = [
+  { Icon: SiReact, label: "React", color: "#61DAFB" },
+  { Icon: SiJavascript, label: "JavaScript", color: "#F7DF1E" },
+  { Icon: FaJava, label: "Java", color: "#E76F00" },
+  { Icon: SiPython, label: "Python", color: "#3776AB" },
+  { Icon: SiMysql, label: "SQL", color: "#4479A1" },
+  { Icon: SiHtml5, label: "HTML5", color: "#E34F26" },
+  { Icon: SiCss, label: "CSS3", color: "#1572B6" },
+  { Icon: SiTailwindcss, label: "Tailwind", color: "#06B6D4" },
+  { Icon: SiNodedotjs, label: "Node.js", color: "#5FA04E" },
+  { Icon: SiExpress, label: "Express", color: "#0F172A" },
+  { Icon: SiMongodb, label: "MongoDB", color: "#47A248" },
+  { Icon: SiGit, label: "Git", color: "#F05032" },
+  { Icon: SiGithub, label: "GitHub", color: "#0F172A" },
+];
+
+function TechStack() {
+  const ref = useReveal();
+  return (
+    <section className="section-pad" ref={ref}>
+      <div className="mx-auto max-w-6xl px-5">
+        <SectionTitle eyebrow="Tech Stack" title="Tools & technologies" desc="The stack I reach for when building modern web apps." />
+        <div className="grid grid-cols-3 gap-3 sm:grid-cols-4 sm:gap-4 md:grid-cols-6 lg:grid-cols-7" data-reveal>
+          {TECH_STACK.map(({ Icon, label, color }) => (
+            <div key={label} className="group flex flex-col items-center gap-2 rounded-2xl border border-border bg-card p-4 shadow-soft transition-all hover:-translate-y-1 hover:border-teal/40 hover:shadow-elegant">
+              <Icon className="h-8 w-8 transition-transform group-hover:scale-110" style={{ color }} />
+              <span className="text-xs font-semibold text-primary/80">{label}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Portfolio() {
   return (
     <div className="min-h-screen bg-background">
@@ -448,6 +483,7 @@ function Portfolio() {
         <Hero />
         <About />
         <Skills />
+        <TechStack />
         <Projects />
         <Education />
         <Experience />
