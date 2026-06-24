@@ -25,7 +25,6 @@ export const Route = createFileRoute("/")({
 const EMAIL = "akshitharoy@example.com";
 const GITHUB = "https://github.com/";
 const LINKEDIN = "https://www.linkedin.com/";
-const RESTAURANT_DEMO = "https://github.com/akshitharoykanchuboina14/Restaurant-website";
 
 function useReveal() {
   const ref = useRef<HTMLDivElement>(null);
@@ -51,8 +50,8 @@ function useReveal() {
 
 function Nav() {
   const links = [
-    ["About", "about"], ["Skills", "skills"], ["Certifications", "certifications"],
-    ["Projects", "projects"], ["Education", "education"], ["Experience", "experience"], ["Contact", "contact"],
+    ["About", "about"], ["Skills", "skills"], ["Projects", "projects"],
+    ["Education", "education"], ["Experience", "experience"], ["Contact", "contact"],
   ] as const;
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-md">
@@ -228,8 +227,8 @@ const PROJECTS = [
     desc: "A premium Indian restaurant website showcasing authentic North & South Indian cuisine, online reservations, and a digital menu with rich visuals.",
     img: restaurantImg,
     tech: ["HTML", "CSS", "JavaScript"],
-    github: GITHUB,
-    demo: RESTAURANT_DEMO,
+    github: "https://github.com/akshitharoykanchuboina14/Restaurant-website",
+    demo: "https://akshitharoykanchuboina14.github.io/Restaurant-website/",
   },
 ];
 
@@ -272,7 +271,7 @@ function Projects() {
   );
 }
 
-type TLItem = { year: string; title: string; place: string; detail?: string; description?: string };
+type TLItem = { year: string; title: string; place: string; detail?: string };
 function Timeline({ items }: { items: TLItem[] }) {
   return (
     <ol className="relative space-y-8 border-l-2 border-dashed border-border pl-8">
@@ -288,7 +287,6 @@ function Timeline({ items }: { items: TLItem[] }) {
               <MapPin className="h-3.5 w-3.5" /> {it.place}
             </p>
             {it.detail && <p className="mt-2 text-sm font-medium text-primary">{it.detail}</p>}
-            {it.description && <p className="mt-3 text-sm leading-relaxed text-foreground/70">{it.description}</p>}
           </div>
         </li>
       ))}
@@ -319,13 +317,7 @@ function Education() {
 function Experience() {
   const ref = useReveal();
   const items: TLItem[] = [
-    {
-      year: "Internship",
-      title: "Data Analytics Intern",
-      place: "Python • Pandas • NumPy • Matplotlib",
-      detail: "Technology: Python",
-      description: "Worked on data analysis using Python, including data cleaning, data processing, exploratory data analysis, and visualization. Analyzed datasets to identify insights and create meaningful reports.",
-    },
+    { year: "Internship", title: "Data Analytics Intern", place: "Python • Pandas, NumPy, Matplotlib", detail: "Performed data cleaning, processing, exploratory data analysis and visualization on real-world datasets to surface insights and produce meaningful reports." },
     { year: "Internship", title: "MERN Full Stack Development", place: "Hands-on training in MongoDB, Express, React, Node.js" },
     { year: "Internship", title: "Full Stack Java Training", place: "Backend fundamentals with Java, SQL and REST APIs" },
   ];
@@ -342,74 +334,57 @@ function Experience() {
   );
 }
 
-const CERTIFICATIONS = [
+const CERTS = [
   {
-    title: "Cisco Certificate",
-    organization: "Cisco Networking Academy",
-    date: "Add completion date",
-    desc: "Strengthened programming fundamentals, logical thinking, and problem-solving skills through structured C programming concepts.",
-    link: "https://drive.google.com/file/d/1p3coaD_yhgIP6XI_KqyxNde3493lQW5d/view?usp=drivesdk",
+    title: "Cisco — C Programming",
+    desc: "Foundations of C programming: syntax, control flow, functions, pointers and memory management.",
+    link: "https://drive.google.com/file/d/1ZlJMu_3T21Qz4mmtR59fQRQ6fyxcS6-a/view?usp=drive_link",
   },
   {
-    title: "TCS Certificate",
-    organization: "TCS iON",
-    date: "Add completion date",
-    desc: "Completed career-focused learning covering workplace readiness, communication, professional skills, and employability fundamentals.",
-    link: "https://drive.google.com/file/d/13UKaB3IDcou83DVnWxo8u3J_CBeayORO/view?usp=drivesdk",
+    title: "TCS iON Career Edge",
+    desc: "Workplace readiness program covering communication, business etiquette and IT fundamentals.",
+    link: "https://drive.google.com/file/d/1MQwUl4m6QNyK7snyjKJYCOTBLu6Octwn/view?usp=drive_link",
   },
   {
-    title: "Infosys Certificate",
-    organization: "Infosys Springboard",
-    date: "Add completion date",
-    desc: "Built a stronger foundation in Python programming, core syntax, data handling, and practical problem-solving approaches.",
-    link: "https://drive.google.com/file/d/1dY2bc901WPuqPeZKEz_Bu4wfVnHCdnBh/view?usp=drivesdk",
+    title: "Infosys — Python",
+    desc: "Core Python programming, data structures, OOP and scripting essentials by Infosys Springboard.",
+    link: "https://drive.google.com/file/d/179y33hsK9-wXygJtd89g1AVCEuhoAnqz/view?usp=drive_link",
   },
   {
-    title: "HTML5 Certificate",
-    organization: "HTML5 Application Development",
-    date: "Add completion date",
-    desc: "Learned modern HTML5 structure, semantic markup, forms, and application development practices for responsive web pages.",
-    link: "https://drive.google.com/file/d/1YaFKVQEyzRIxR1tGQViH8uAkFBZ2VLFR/view?usp=drivesdk",
+    title: "HTML5 Application Development",
+    desc: "Building modern, semantic and responsive web applications using HTML5, CSS and JavaScript.",
+    link: "https://drive.google.com/file/d/18HMgrOll73VkKwDk8HgZqDCtmhfJhIJO/view?usp=drive_link",
   },
   {
-    title: "DevOps Certificate",
-    organization: "DevOps Certification Program",
-    date: "Add completion date",
-    desc: "Gained exposure to DevOps concepts including version control, automation, continuous integration, deployment, and collaboration workflows.",
-    link: "https://drive.google.com/file/d/1lQ2Kjgp9O_xgW0lCPbAXZoGZGmdZbYgj/view?usp=drivesdk",
+    title: "DevOps Certification",
+    desc: "DevOps lifecycle, CI/CD pipelines, version control and automation tooling fundamentals.",
+    link: "https://drive.google.com/file/d/1OevTpAaslRYOE4lmhQS4DEDqsuV6Ov_v/view?usp=drive_link",
   },
 ];
 
-function Certifications() {
+function Certificates() {
   const ref = useReveal();
   return (
     <section id="certifications" className="section-pad bg-secondary/40" ref={ref}>
       <div className="mx-auto max-w-6xl px-5">
-        <SectionTitle eyebrow="Certifications" title="Professional credentials" desc="Verified learning milestones that support my development skills and career readiness." />
-        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {CERTIFICATIONS.map((certificate) => (
-            <article key={certificate.title} data-reveal className="group flex h-full flex-col rounded-3xl border border-border bg-card p-6 shadow-soft transition-all hover:-translate-y-1 hover:border-teal/40 hover:shadow-elegant">
-              <div className="flex items-start gap-4">
-                <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-teal/15 to-sky/15 text-teal transition-transform group-hover:scale-110">
-                  <Award className="h-6 w-6" />
-                </span>
-                <div>
-                  <h3 className="text-lg font-bold text-primary">{certificate.title}</h3>
-                  <p className="mt-1 text-sm font-semibold text-teal">{certificate.organization}</p>
-                </div>
-              </div>
-              <p className="mt-5 text-xs font-bold uppercase tracking-[0.18em] text-primary/50">Completion date</p>
-              <p className="mt-1 text-sm font-semibold text-primary/80">{certificate.date}</p>
-              <p className="mt-4 flex-1 text-sm leading-relaxed text-foreground/70">{certificate.desc}</p>
+        <SectionTitle eyebrow="Certifications" title="Verified credentials" desc="Programs and certifications that back up my hands-on learning." />
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {CERTS.map((c) => (
+            <div key={c.title} data-reveal className="group flex h-full flex-col rounded-2xl border border-border bg-card p-6 shadow-soft transition-all hover:-translate-y-1 hover:border-teal/40 hover:shadow-elegant">
+              <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-teal/15 to-sky/15 text-teal transition-transform group-hover:scale-110">
+                <Award className="h-6 w-6" />
+              </span>
+              <h3 className="mt-5 text-base font-bold text-primary">{c.title}</h3>
+              <p className="mt-2 flex-1 text-sm text-foreground/70">{c.desc}</p>
               <a
-                href={certificate.link}
+                href={c.link}
                 target="_blank"
                 rel="noreferrer"
-                className="mt-6 inline-flex w-fit items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-transform hover:-translate-y-0.5"
+                className="mt-5 inline-flex w-fit items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-transform hover:-translate-y-0.5"
               >
-                View Certificate <ExternalLink className="h-4 w-4" />
+                <ExternalLink className="h-4 w-4" /> View Certificate
               </a>
-            </article>
+            </div>
           ))}
         </div>
       </div>
@@ -538,11 +513,11 @@ function Portfolio() {
         <Hero />
         <About />
         <Skills />
-        <Certifications />
         <TechStack />
         <Projects />
         <Education />
         <Experience />
+        <Certificates />
         <Achievements />
         <Contact />
       </main>
