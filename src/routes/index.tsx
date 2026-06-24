@@ -227,8 +227,8 @@ const PROJECTS = [
     desc: "A premium Indian restaurant website showcasing authentic North & South Indian cuisine, online reservations, and a digital menu with rich visuals.",
     img: restaurantImg,
     tech: ["HTML", "CSS", "JavaScript"],
-    github: GITHUB,
-    demo: "#",
+    github: "https://github.com/akshitharoykanchuboina14/Restaurant-website",
+    demo: "https://akshitharoykanchuboina14.github.io/Restaurant-website/",
   },
 ];
 
@@ -258,7 +258,7 @@ function Projects() {
                   <a href={p.github} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-primary/20 px-4 py-2 text-sm font-semibold text-primary transition-colors hover:border-teal hover:text-teal">
                     <Github className="h-4 w-4" /> Code
                   </a>
-                  <a href={p.demo} className="inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-transform hover:-translate-y-0.5">
+                  <a href={p.demo} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-transform hover:-translate-y-0.5">
                     <ExternalLink className="h-4 w-4" /> Live Demo
                   </a>
                 </div>
@@ -317,6 +317,7 @@ function Education() {
 function Experience() {
   const ref = useReveal();
   const items: TLItem[] = [
+    { year: "Internship", title: "Data Analytics Intern", place: "Python • Pandas, NumPy, Matplotlib", detail: "Performed data cleaning, processing, exploratory data analysis and visualization on real-world datasets to surface insights and produce meaningful reports." },
     { year: "Internship", title: "MERN Full Stack Development", place: "Hands-on training in MongoDB, Express, React, Node.js" },
     { year: "Internship", title: "Full Stack Java Training", place: "Backend fundamentals with Java, SQL and REST APIs" },
   ];
@@ -334,26 +335,55 @@ function Experience() {
 }
 
 const CERTS = [
-  "Cisco — C Programming",
-  "TCS iON Career Edge",
-  "Infosys — Python",
-  "HTML5 Application Development",
-  "DevOps Certification",
+  {
+    title: "Cisco — C Programming",
+    desc: "Foundations of C programming: syntax, control flow, functions, pointers and memory management.",
+    link: "https://drive.google.com/file/d/1ZlJMu_3T21Qz4mmtR59fQRQ6fyxcS6-a/view?usp=drive_link",
+  },
+  {
+    title: "TCS iON Career Edge",
+    desc: "Workplace readiness program covering communication, business etiquette and IT fundamentals.",
+    link: "https://drive.google.com/file/d/1MQwUl4m6QNyK7snyjKJYCOTBLu6Octwn/view?usp=drive_link",
+  },
+  {
+    title: "Infosys — Python",
+    desc: "Core Python programming, data structures, OOP and scripting essentials by Infosys Springboard.",
+    link: "https://drive.google.com/file/d/179y33hsK9-wXygJtd89g1AVCEuhoAnqz/view?usp=drive_link",
+  },
+  {
+    title: "HTML5 Application Development",
+    desc: "Building modern, semantic and responsive web applications using HTML5, CSS and JavaScript.",
+    link: "https://drive.google.com/file/d/18HMgrOll73VkKwDk8HgZqDCtmhfJhIJO/view?usp=drive_link",
+  },
+  {
+    title: "DevOps Certification",
+    desc: "DevOps lifecycle, CI/CD pipelines, version control and automation tooling fundamentals.",
+    link: "https://drive.google.com/file/d/1OevTpAaslRYOE4lmhQS4DEDqsuV6Ov_v/view?usp=drive_link",
+  },
 ];
 
 function Certificates() {
   const ref = useReveal();
   return (
-    <section className="section-pad bg-secondary/40" ref={ref}>
+    <section id="certifications" className="section-pad bg-secondary/40" ref={ref}>
       <div className="mx-auto max-w-6xl px-5">
-        <SectionTitle eyebrow="Certificates" title="Continuous learning" />
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <SectionTitle eyebrow="Certifications" title="Verified credentials" desc="Programs and certifications that back up my hands-on learning." />
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {CERTS.map((c) => (
-            <div key={c} data-reveal className="group flex items-center gap-4 rounded-2xl border border-border bg-card p-5 shadow-soft transition-all hover:-translate-y-1 hover:border-teal/40 hover:shadow-elegant">
+            <div key={c.title} data-reveal className="group flex h-full flex-col rounded-2xl border border-border bg-card p-6 shadow-soft transition-all hover:-translate-y-1 hover:border-teal/40 hover:shadow-elegant">
               <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-teal/15 to-sky/15 text-teal transition-transform group-hover:scale-110">
                 <Award className="h-6 w-6" />
               </span>
-              <p className="text-sm font-semibold text-primary">{c}</p>
+              <h3 className="mt-5 text-base font-bold text-primary">{c.title}</h3>
+              <p className="mt-2 flex-1 text-sm text-foreground/70">{c.desc}</p>
+              <a
+                href={c.link}
+                target="_blank"
+                rel="noreferrer"
+                className="mt-5 inline-flex w-fit items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-transform hover:-translate-y-0.5"
+              >
+                <ExternalLink className="h-4 w-4" /> View Certificate
+              </a>
             </div>
           ))}
         </div>
