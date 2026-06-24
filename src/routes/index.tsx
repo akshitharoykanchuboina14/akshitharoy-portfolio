@@ -229,7 +229,7 @@ const PROJECTS = [
     img: restaurantImg,
     tech: ["HTML", "CSS", "JavaScript"],
     github: GITHUB,
-    demo: "#",
+    demo: RESTAURANT_DEMO,
   },
 ];
 
@@ -259,7 +259,7 @@ function Projects() {
                   <a href={p.github} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-primary/20 px-4 py-2 text-sm font-semibold text-primary transition-colors hover:border-teal hover:text-teal">
                     <Github className="h-4 w-4" /> Code
                   </a>
-                  <a href={p.demo} className="inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-transform hover:-translate-y-0.5">
+                  <a href={p.demo} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-transform hover:-translate-y-0.5">
                     <ExternalLink className="h-4 w-4" /> Live Demo
                   </a>
                 </div>
