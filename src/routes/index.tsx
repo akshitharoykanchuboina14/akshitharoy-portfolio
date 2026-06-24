@@ -25,6 +25,7 @@ export const Route = createFileRoute("/")({
 const EMAIL = "akshitharoy@example.com";
 const GITHUB = "https://github.com/";
 const LINKEDIN = "https://www.linkedin.com/";
+const RESTAURANT_DEMO = "https://github.com/akshitharoykanchuboina14/Restaurant-website";
 
 function useReveal() {
   const ref = useRef<HTMLDivElement>(null);
@@ -50,8 +51,8 @@ function useReveal() {
 
 function Nav() {
   const links = [
-    ["About", "about"], ["Skills", "skills"], ["Projects", "projects"],
-    ["Education", "education"], ["Experience", "experience"], ["Contact", "contact"],
+    ["About", "about"], ["Skills", "skills"], ["Certifications", "certifications"],
+    ["Projects", "projects"], ["Experience", "experience"], ["Contact", "contact"],
   ] as const;
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-md">
