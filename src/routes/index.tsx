@@ -538,11 +538,11 @@ function Portfolio() {
         <Hero />
         <About />
         <Skills />
+        <Certifications />
         <TechStack />
         <Projects />
         <Education />
         <Experience />
-        <Certificates />
         <Achievements />
         <Contact />
       </main>
