@@ -227,8 +227,8 @@ const PROJECTS = [
     desc: "A premium Indian restaurant website showcasing authentic North & South Indian cuisine, online reservations, and a digital menu with rich visuals.",
     img: restaurantImg,
     tech: ["HTML", "CSS", "JavaScript"],
-    github: GITHUB,
-    demo: "#",
+    github: "https://github.com/akshitharoykanchuboina14/Restaurant-website",
+    demo: "https://akshitharoykanchuboina14.github.io/Restaurant-website/",
   },
 ];
 
