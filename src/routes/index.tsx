@@ -342,28 +342,74 @@ function Experience() {
   );
 }
 
-const CERTS = [
-  "Cisco — C Programming",
-  "TCS iON Career Edge",
-  "Infosys — Python",
-  "HTML5 Application Development",
-  "DevOps Certification",
+const CERTIFICATIONS = [
+  {
+    title: "Cisco Certificate",
+    organization: "Cisco Networking Academy",
+    date: "Add completion date",
+    desc: "Strengthened programming fundamentals, logical thinking, and problem-solving skills through structured C programming concepts.",
+    link: "https://drive.google.com/file/d/1p3coaD_yhgIP6XI_KqyxNde3493lQW5d/view?usp=drivesdk",
+  },
+  {
+    title: "TCS Certificate",
+    organization: "TCS iON",
+    date: "Add completion date",
+    desc: "Completed career-focused learning covering workplace readiness, communication, professional skills, and employability fundamentals.",
+    link: "https://drive.google.com/file/d/13UKaB3IDcou83DVnWxo8u3J_CBeayORO/view?usp=drivesdk",
+  },
+  {
+    title: "Infosys Certificate",
+    organization: "Infosys Springboard",
+    date: "Add completion date",
+    desc: "Built a stronger foundation in Python programming, core syntax, data handling, and practical problem-solving approaches.",
+    link: "https://drive.google.com/file/d/1dY2bc901WPuqPeZKEz_Bu4wfVnHCdnBh/view?usp=drivesdk",
+  },
+  {
+    title: "HTML5 Certificate",
+    organization: "HTML5 Application Development",
+    date: "Add completion date",
+    desc: "Learned modern HTML5 structure, semantic markup, forms, and application development practices for responsive web pages.",
+    link: "https://drive.google.com/file/d/1YaFKVQEyzRIxR1tGQViH8uAkFBZ2VLFR/view?usp=drivesdk",
+  },
+  {
+    title: "DevOps Certificate",
+    organization: "DevOps Certification Program",
+    date: "Add completion date",
+    desc: "Gained exposure to DevOps concepts including version control, automation, continuous integration, deployment, and collaboration workflows.",
+    link: "https://drive.google.com/file/d/1lQ2Kjgp9O_xgW0lCPbAXZoGZGmdZbYgj/view?usp=drivesdk",
+  },
 ];
 
-function Certificates() {
+function Certifications() {
   const ref = useReveal();
   return (
-    <section className="section-pad bg-secondary/40" ref={ref}>
+    <section id="certifications" className="section-pad bg-secondary/40" ref={ref}>
       <div className="mx-auto max-w-6xl px-5">
-        <SectionTitle eyebrow="Certificates" title="Continuous learning" />
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {CERTS.map((c) => (
-            <div key={c} data-reveal className="group flex items-center gap-4 rounded-2xl border border-border bg-card p-5 shadow-soft transition-all hover:-translate-y-1 hover:border-teal/40 hover:shadow-elegant">
-              <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-teal/15 to-sky/15 text-teal transition-transform group-hover:scale-110">
-                <Award className="h-6 w-6" />
-              </span>
-              <p className="text-sm font-semibold text-primary">{c}</p>
-            </div>
+        <SectionTitle eyebrow="Certifications" title="Professional credentials" desc="Verified learning milestones that support my development skills and career readiness." />
+        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          {CERTIFICATIONS.map((certificate) => (
+            <article key={certificate.title} data-reveal className="group flex h-full flex-col rounded-3xl border border-border bg-card p-6 shadow-soft transition-all hover:-translate-y-1 hover:border-teal/40 hover:shadow-elegant">
+              <div className="flex items-start gap-4">
+                <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-teal/15 to-sky/15 text-teal transition-transform group-hover:scale-110">
+                  <Award className="h-6 w-6" />
+                </span>
+                <div>
+                  <h3 className="text-lg font-bold text-primary">{certificate.title}</h3>
+                  <p className="mt-1 text-sm font-semibold text-teal">{certificate.organization}</p>
+                </div>
+              </div>
+              <p className="mt-5 text-xs font-bold uppercase tracking-[0.18em] text-primary/50">Completion date</p>
+              <p className="mt-1 text-sm font-semibold text-primary/80">{certificate.date}</p>
+              <p className="mt-4 flex-1 text-sm leading-relaxed text-foreground/70">{certificate.desc}</p>
+              <a
+                href={certificate.link}
+                target="_blank"
+                rel="noreferrer"
+                className="mt-6 inline-flex w-fit items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-transform hover:-translate-y-0.5"
+              >
+                View Certificate <ExternalLink className="h-4 w-4" />
+              </a>
+            </article>
           ))}
         </div>
       </div>
