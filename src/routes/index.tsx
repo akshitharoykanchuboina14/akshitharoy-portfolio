@@ -272,7 +272,7 @@ function Projects() {
   );
 }
 
-type TLItem = { year: string; title: string; place: string; detail?: string };
+type TLItem = { year: string; title: string; place: string; detail?: string; description?: string };
 function Timeline({ items }: { items: TLItem[] }) {
   return (
     <ol className="relative space-y-8 border-l-2 border-dashed border-border pl-8">
@@ -288,6 +288,7 @@ function Timeline({ items }: { items: TLItem[] }) {
               <MapPin className="h-3.5 w-3.5" /> {it.place}
             </p>
             {it.detail && <p className="mt-2 text-sm font-medium text-primary">{it.detail}</p>}
+            {it.description && <p className="mt-3 text-sm leading-relaxed text-foreground/70">{it.description}</p>}
           </div>
         </li>
       ))}
@@ -318,6 +319,13 @@ function Education() {
 function Experience() {
   const ref = useReveal();
   const items: TLItem[] = [
+    {
+      year: "Internship",
+      title: "Data Analytics Intern",
+      place: "Python • Pandas • NumPy • Matplotlib",
+      detail: "Technology: Python",
+      description: "Worked on data analysis using Python, including data cleaning, data processing, exploratory data analysis, and visualization. Analyzed datasets to identify insights and create meaningful reports.",
+    },
     { year: "Internship", title: "MERN Full Stack Development", place: "Hands-on training in MongoDB, Express, React, Node.js" },
     { year: "Internship", title: "Full Stack Java Training", place: "Backend fundamentals with Java, SQL and REST APIs" },
   ];
