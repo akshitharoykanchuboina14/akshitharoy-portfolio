@@ -83,7 +83,7 @@ function Hero() {
     <section id="top" className="relative overflow-hidden" style={{ background: "var(--gradient-hero)" }}>
       <div className="pointer-events-none absolute -top-24 -right-24 h-72 w-72 rounded-full bg-teal/20 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-sky/20 blur-3xl" />
-      <div className="mx-auto grid max-w-6xl items-center gap-10 px-5 py-16 md:grid-cols-[1.25fr_1fr] md:gap-12 md:py-24">
+      <div className="mx-auto grid max-w-6xl items-center gap-8 px-5 py-12 md:grid-cols-[1.25fr_1fr] md:gap-12 md:py-24">
         <div className="fade-up">
           <span className="inline-flex items-center gap-2 rounded-full border border-teal/30 bg-white/70 px-3 py-1 text-xs font-semibold text-teal backdrop-blur">
             <Sparkles className="h-3.5 w-3.5" /> Open to Software Developer Internships
