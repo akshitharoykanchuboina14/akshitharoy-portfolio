@@ -318,7 +318,7 @@ function Education() {
 function Experience() {
   const ref = useReveal();
   const items: TLItem[] = [
-    { year: "Internship", title: "Data Analytics Intern", place: "Python • Pandas, NumPy, Matplotlib", detail: "Performed data cleaning, processing, exploratory data analysis and visualization on real-world datasets to surface insights and produce meaningful reports." },
+    { year: "Internship", title: "Data Analytics Intern", place: "Python • Pandas, NumPy, Matplotlib", detail: "Worked on data analysis using Python, including data cleaning, processing, exploratory data analysis, and visualization using Python libraries." },
     { year: "Internship", title: "MERN Full Stack Development", place: "Hands-on training in MongoDB, Express, React, Node.js" },
     { year: "Internship", title: "Full Stack Java Training", place: "Backend fundamentals with Java, SQL and REST APIs" },
   ];
