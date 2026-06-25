@@ -426,8 +426,8 @@ function Contact() {
   const ref = useReveal();
   const links = [
     { icon: Mail, label: "Email", value: EMAIL, href: `mailto:${EMAIL}` },
-    { icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/akshitharoy", href: LINKEDIN },
-    { icon: Github, label: "GitHub", value: "github.com/akshitharoy", href: GITHUB },
+    { icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/akshitharoy-kanchuboina", href: LINKEDIN },
+    { icon: Github, label: "GitHub", value: "github.com/akshitharoykanchuboina14", href: GITHUB },
   ];
   return (
     <section id="contact" className="section-pad" ref={ref}>
