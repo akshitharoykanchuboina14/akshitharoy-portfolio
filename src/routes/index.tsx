@@ -103,7 +103,7 @@ function Hero() {
             <a href="#projects" className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-elegant transition-transform hover:-translate-y-0.5">
               View Projects <ArrowRight className="h-4 w-4" />
             </a>
-            <a href="/resume.pdf" download="Akshitha_Roy_Resume.pdf" className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-white px-5 py-3 text-sm font-semibold text-primary transition-colors hover:border-teal hover:text-teal">
+            <a href={RESUME} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-white px-5 py-3 text-sm font-semibold text-primary transition-colors hover:border-teal hover:text-teal">
               <Download className="h-4 w-4" /> Download Resume
             </a>
             <a href="#contact" className="inline-flex items-center gap-2 rounded-full bg-teal px-5 py-3 text-sm font-semibold text-teal-foreground shadow-soft transition-transform hover:-translate-y-0.5">
