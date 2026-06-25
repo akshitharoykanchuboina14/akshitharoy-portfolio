@@ -472,19 +472,13 @@ function Footer() {
 }
 
 const TECH_STACK = [
-  { Icon: SiReact, label: "React", color: "#61DAFB" },
+  { Icon: SiHtml5, label: "HTML", color: "#E34F26" },
+  { Icon: SiCss, label: "CSS", color: "#1572B6" },
   { Icon: SiJavascript, label: "JavaScript", color: "#F7DF1E" },
-  { Icon: FaJava, label: "Java", color: "#E76F00" },
+  { Icon: SiReact, label: "React", color: "#61DAFB" },
   { Icon: SiPython, label: "Python", color: "#3776AB" },
+  { Icon: FaJava, label: "Java", color: "#E76F00" },
   { Icon: SiMysql, label: "SQL", color: "#4479A1" },
-  { Icon: SiHtml5, label: "HTML5", color: "#E34F26" },
-  { Icon: SiCss, label: "CSS3", color: "#1572B6" },
-  { Icon: SiTailwindcss, label: "Tailwind", color: "#06B6D4" },
-  { Icon: SiNodedotjs, label: "Node.js", color: "#5FA04E" },
-  { Icon: SiExpress, label: "Express", color: "#0F172A" },
-  { Icon: SiMongodb, label: "MongoDB", color: "#47A248" },
-  { Icon: SiGit, label: "Git", color: "#F05032" },
-  { Icon: SiGithub, label: "GitHub", color: "#0F172A" },
 ];
 
 function TechStack() {
