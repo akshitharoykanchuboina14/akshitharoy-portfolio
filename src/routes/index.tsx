@@ -23,8 +23,9 @@ export const Route = createFileRoute("/")({
 });
 
 const EMAIL = "akshitharoy@example.com";
-const GITHUB = "https://github.com/";
-const LINKEDIN = "https://www.linkedin.com/";
+const GITHUB = "https://github.com/akshitharoykanchuboina14";
+const LINKEDIN = "https://www.linkedin.com/in/akshitharoy-kanchuboina-6102b8326";
+const RESUME = "https://drive.google.com/file/d/1bUlMCCYB3L1PC1VysSd6s8ALd-cbPooQ/view?usp=drivesdk";
 
 function useReveal() {
   const ref = useRef<HTMLDivElement>(null);
