@@ -463,9 +463,17 @@ function Contact() {
 function Footer() {
   return (
     <footer className="border-t border-border py-8">
-      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-5 text-sm text-foreground/60 sm:flex-row">
+      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-5 text-sm text-foreground/60 sm:flex-row">
         <p>© {new Date().getFullYear()} Akshitha Roy Kanchuboina. All rights reserved.</p>
-        <p>Built with React & Tailwind.</p>
+        <div className="flex items-center gap-4">
+          <a href={LINKEDIN} target="_blank" rel="noreferrer" aria-label="LinkedIn" className="transition-colors hover:text-teal">
+            <Linkedin className="h-5 w-5" />
+          </a>
+          <a href={GITHUB} target="_blank" rel="noreferrer" aria-label="GitHub" className="transition-colors hover:text-teal">
+            <Github className="h-5 w-5" />
+          </a>
+          <p className="hidden sm:block">Built with React & Tailwind.</p>
+        </div>
       </div>
     </footer>
   );
@@ -484,7 +492,7 @@ const TECH_STACK = [
 function TechStack() {
   const ref = useReveal();
   return (
-    <section className="section-pad" ref={ref}>
+    <section id="tech-stack" className="section-pad" ref={ref}>
       <div className="mx-auto max-w-6xl px-5">
         <SectionTitle eyebrow="Tech Stack" title="Tools & technologies" desc="The stack I reach for when building modern web apps." />
         <div className="grid grid-cols-3 gap-3 sm:grid-cols-4 sm:gap-4 md:grid-cols-6 lg:grid-cols-7" data-reveal>
