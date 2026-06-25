@@ -51,8 +51,8 @@ function useReveal() {
 
 function Nav() {
   const links = [
-    ["About", "about"], ["Skills", "skills"], ["Projects", "projects"],
-    ["Education", "education"], ["Experience", "experience"], ["Contact", "contact"],
+    ["About", "about"], ["Skills", "skills"], ["Tech Stack", "tech-stack"],
+    ["Projects", "projects"], ["Education", "education"], ["Experience", "experience"], ["Contact", "contact"],
   ] as const;
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-md">
