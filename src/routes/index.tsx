@@ -25,7 +25,7 @@ export const Route = createFileRoute("/")({
 const EMAIL = "akshitharoy@example.com";
 const GITHUB = "https://github.com/akshitharoykanchuboina14";
 const LINKEDIN = "https://www.linkedin.com/in/akshitharoy-kanchuboina-6102b8326";
-const RESUME = "https://drive.google.com/file/d/1ZNNbQTxyVGf6TpakssAKMw1Tflz4CTIn/view?usp=drivesdk";
+const RESUME = "https://drive.google.com/file/d/1bUlMCCYB3L1PC1VysSd6s8ALd-cbPooQ/view?usp=drivesdk";
 
 function useReveal() {
   const ref = useRef<HTMLDivElement>(null);
@@ -52,8 +52,7 @@ function useReveal() {
 function Nav() {
   const links = [
     ["About", "about"], ["Skills", "skills"], ["Tech Stack", "tech-stack"],
-    ["Projects", "projects"], ["Education", "education"], ["Experience", "experience"],
-    ["Certifications", "certifications"], ["Contact", "contact"],
+    ["Projects", "projects"], ["Education", "education"], ["Experience", "experience"], ["Contact", "contact"],
   ] as const;
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-md">
@@ -84,23 +83,23 @@ function Hero() {
     <section id="top" className="relative overflow-hidden" style={{ background: "var(--gradient-hero)" }}>
       <div className="pointer-events-none absolute -top-24 -right-24 h-72 w-72 rounded-full bg-teal/20 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-sky/20 blur-3xl" />
-      <div className="mx-auto grid max-w-6xl items-center gap-10 px-5 py-12 md:grid-cols-[1.25fr_1fr] md:gap-12 md:py-20">
-        <div className="fade-up text-center sm:text-left">
+      <div className="mx-auto grid max-w-6xl items-center gap-8 px-5 py-12 md:grid-cols-[1.25fr_1fr] md:gap-12 md:py-24">
+        <div className="fade-up">
           <span className="inline-flex items-center gap-2 rounded-full border border-teal/30 bg-white/70 px-3 py-1 text-xs font-semibold text-teal backdrop-blur">
             <Sparkles className="h-3.5 w-3.5" /> Open to Software Developer Internships
           </span>
-          <h1 className="mt-4 text-[2.25rem] font-extrabold leading-[1.05] text-primary sm:text-5xl md:text-[3.5rem]">
+          <h1 className="mt-5 text-[2.5rem] font-extrabold leading-[1.05] text-primary sm:text-5xl md:text-[3.75rem]">
             Akshitha Roy <br />
             <span className="bg-gradient-to-r from-teal to-sky bg-clip-text text-transparent">Kanchuboina</span>
           </h1>
-          <p className="mt-3 text-base font-semibold uppercase tracking-wide text-primary/70 sm:text-lg">
+          <p className="mt-4 text-base font-semibold uppercase tracking-wide text-primary/70 sm:text-lg">
             Computer Science Student <span className="text-teal">•</span> Full Stack Developer
           </p>
-          <p className="mx-auto mt-4 max-w-lg text-base leading-relaxed text-foreground/80 sm:mx-0 sm:text-lg">
-            Computer Science student passionate about building clean, responsive web apps.
-            Skilled in React, JavaScript, and modern tooling. Seeking a software developer internship.
+          <p className="mt-5 max-w-xl text-base leading-relaxed text-foreground/80 sm:text-lg">
+            I design and build clean, responsive web applications with React, JavaScript and modern
+            tooling — focused on shipping recruiter-ready, production-quality interfaces.
           </p>
-          <div className="mt-6 flex flex-wrap justify-center gap-3 sm:justify-start">
+          <div className="mt-8 flex flex-wrap gap-3">
             <a href="#projects" className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-elegant transition-transform hover:-translate-y-0.5">
               View Projects <ArrowRight className="h-4 w-4" />
             </a>
@@ -114,15 +113,15 @@ function Hero() {
         </div>
         <div className="fade-up flex justify-center md:justify-end" style={{ animationDelay: "120ms" }}>
           <div className="relative">
-            <div className="absolute inset-0 -m-2 rounded-full bg-gradient-to-tr from-teal to-sky blur-xl opacity-60" />
-            <div className="relative float-slow rounded-full bg-white p-1.5 shadow-elegant ring-1 ring-border">
+            <div className="absolute inset-0 -m-3 rounded-full bg-gradient-to-tr from-teal to-sky blur-xl opacity-60" />
+            <div className="relative float-slow rounded-full bg-white p-2 shadow-elegant ring-1 ring-border">
               <div className="overflow-hidden rounded-full">
                 <img
                   src={profileAsset.url}
                   alt="Akshitha Roy Kanchuboina"
                   width={320}
                   height={320}
-                  className="h-48 w-48 object-cover sm:h-60 sm:w-60 md:h-72 md:w-72"
+                  className="h-56 w-56 object-cover sm:h-64 sm:w-64 md:h-72 md:w-72"
                 />
               </div>
             </div>
@@ -319,7 +318,7 @@ function Education() {
 function Experience() {
   const ref = useReveal();
   const items: TLItem[] = [
-    { year: "Internship", title: "Data Analytics Intern", place: "Python", detail: "Worked on data analysis using Python, including data cleaning, processing, exploratory data analysis, and visualization using Python libraries." },
+    { year: "Internship", title: "Data Analytics Intern", place: "Python • Pandas, NumPy, Matplotlib", detail: "Worked on data analysis using Python, including data cleaning, processing, exploratory data analysis, and visualization using Python libraries." },
     { year: "Internship", title: "MERN Full Stack Development", place: "Hands-on training in MongoDB, Express, React, Node.js" },
     { year: "Internship", title: "Full Stack Java Training", place: "Backend fundamentals with Java, SQL and REST APIs" },
   ];
@@ -427,8 +426,8 @@ function Contact() {
   const ref = useReveal();
   const links = [
     { icon: Mail, label: "Email", value: EMAIL, href: `mailto:${EMAIL}` },
-    { icon: Linkedin, label: "LinkedIn", value: "Akshitha Roy Kanchuboina", href: LINKEDIN },
-    { icon: Github, label: "GitHub", value: "akshitharoykanchuboina14", href: GITHUB },
+    { icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/akshitharoy-kanchuboina", href: LINKEDIN },
+    { icon: Github, label: "GitHub", value: "github.com/akshitharoykanchuboina14", href: GITHUB },
   ];
   return (
     <section id="contact" className="section-pad" ref={ref}>
@@ -473,8 +472,8 @@ function Footer() {
           <a href={GITHUB} target="_blank" rel="noreferrer" aria-label="GitHub" className="transition-colors hover:text-teal">
             <Github className="h-5 w-5" />
           </a>
+          <p className="hidden sm:block">Built with React & Tailwind.</p>
         </div>
-        <p>Built with React & Tailwind.</p>
       </div>
     </footer>
   );
@@ -496,11 +495,11 @@ function TechStack() {
     <section id="tech-stack" className="section-pad" ref={ref}>
       <div className="mx-auto max-w-6xl px-5">
         <SectionTitle eyebrow="Tech Stack" title="Tools & technologies" desc="The stack I reach for when building modern web apps." />
-        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7" data-reveal>
+        <div className="grid grid-cols-3 gap-3 sm:grid-cols-4 sm:gap-4 md:grid-cols-6 lg:grid-cols-7" data-reveal>
           {TECH_STACK.map(({ Icon, label, color }) => (
-            <div key={label} className="group flex flex-col items-center gap-3 rounded-2xl border border-border bg-card p-5 shadow-soft transition-all hover:-translate-y-1 hover:border-teal/40 hover:shadow-elegant">
-              <Icon className="h-10 w-10 transition-transform group-hover:scale-110" style={{ color }} />
-              <span className="text-sm font-semibold text-primary/80">{label}</span>
+            <div key={label} className="group flex flex-col items-center gap-2 rounded-2xl border border-border bg-card p-4 shadow-soft transition-all hover:-translate-y-1 hover:border-teal/40 hover:shadow-elegant">
+              <Icon className="h-8 w-8 transition-transform group-hover:scale-110" style={{ color }} />
+              <span className="text-xs font-semibold text-primary/80">{label}</span>
             </div>
           ))}
         </div>
