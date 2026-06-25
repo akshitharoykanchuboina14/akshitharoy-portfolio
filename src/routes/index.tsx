@@ -427,8 +427,8 @@ function Contact() {
   const ref = useReveal();
   const links = [
     { icon: Mail, label: "Email", value: EMAIL, href: `mailto:${EMAIL}` },
-    { icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/akshitharoy", href: LINKEDIN },
-    { icon: Github, label: "GitHub", value: "github.com/akshitharoy", href: GITHUB },
+    { icon: Linkedin, label: "LinkedIn", value: "Akshitha Roy Kanchuboina", href: LINKEDIN },
+    { icon: Github, label: "GitHub", value: "akshitharoykanchuboina14", href: GITHUB },
   ];
   return (
     <section id="contact" className="section-pad" ref={ref}>
@@ -464,8 +464,16 @@ function Contact() {
 function Footer() {
   return (
     <footer className="border-t border-border py-8">
-      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-5 text-sm text-foreground/60 sm:flex-row">
+      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-5 text-sm text-foreground/60 sm:flex-row">
         <p>© {new Date().getFullYear()} Akshitha Roy Kanchuboina. All rights reserved.</p>
+        <div className="flex items-center gap-4">
+          <a href={LINKEDIN} target="_blank" rel="noreferrer" aria-label="LinkedIn" className="transition-colors hover:text-teal">
+            <Linkedin className="h-5 w-5" />
+          </a>
+          <a href={GITHUB} target="_blank" rel="noreferrer" aria-label="GitHub" className="transition-colors hover:text-teal">
+            <Github className="h-5 w-5" />
+          </a>
+        </div>
         <p>Built with React & Tailwind.</p>
       </div>
     </footer>
