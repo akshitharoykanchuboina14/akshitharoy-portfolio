@@ -87,16 +87,16 @@ function Hero() {
           <span className="inline-flex items-center gap-2 rounded-full border border-teal/30 bg-white/70 px-3 py-1 text-xs font-semibold text-teal backdrop-blur">
             <Sparkles className="h-3.5 w-3.5" /> Open to Software Developer Internships
           </span>
-          <h1 className="mt-5 text-[2.5rem] font-extrabold leading-[1.05] text-primary sm:text-5xl md:text-[3.75rem]">
-            Akshitha Roy <br />
+          <h1 className="mt-5 text-4xl font-extrabold leading-[1.08] text-primary sm:text-5xl md:text-[3.5rem]">
+            Akshitha Roy{" "}
             <span className="bg-gradient-to-r from-teal to-sky bg-clip-text text-transparent">Kanchuboina</span>
           </h1>
           <p className="mt-4 text-base font-semibold uppercase tracking-wide text-primary/70 sm:text-lg">
-            Computer Science Student <span className="text-teal">•</span> Full Stack Developer
+            Computer Science Graduate <span className="text-teal">•</span> Aspiring Software Developer
           </p>
           <p className="mt-5 max-w-xl text-base leading-relaxed text-foreground/80 sm:text-lg">
-            I design and build clean, responsive web applications with React, JavaScript and modern
-            tooling — focused on shipping recruiter-ready, production-quality interfaces.
+            I build clean, responsive web applications with React and modern tooling. Passionate about
+            writing quality code and ready to contribute as a software developer.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a href="#projects" className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-elegant transition-transform hover:-translate-y-0.5">
@@ -107,6 +107,17 @@ function Hero() {
             </a>
             <a href="#contact" className="inline-flex items-center gap-2 rounded-full bg-teal px-5 py-3 text-sm font-semibold text-teal-foreground shadow-soft transition-transform hover:-translate-y-0.5">
               <Mail className="h-4 w-4" /> Contact Me
+            </a>
+          </div>
+          <div className="mt-6 flex items-center gap-3">
+            <a href={GITHUB} target="_blank" rel="noreferrer" aria-label="GitHub" className="grid h-10 w-10 place-items-center rounded-full border border-border bg-white text-primary shadow-soft transition-all hover:-translate-y-0.5 hover:border-teal hover:text-teal">
+              <Github className="h-5 w-5" />
+            </a>
+            <a href={LINKEDIN} target="_blank" rel="noreferrer" aria-label="LinkedIn" className="grid h-10 w-10 place-items-center rounded-full border border-border bg-white text-primary shadow-soft transition-all hover:-translate-y-0.5 hover:border-teal hover:text-teal">
+              <Linkedin className="h-5 w-5" />
+            </a>
+            <a href={`mailto:${EMAIL}`} aria-label="Email" className="grid h-10 w-10 place-items-center rounded-full border border-border bg-white text-primary shadow-soft transition-all hover:-translate-y-0.5 hover:border-teal hover:text-teal">
+              <Mail className="h-5 w-5" />
             </a>
           </div>
         </div>
