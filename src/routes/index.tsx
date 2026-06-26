@@ -2,21 +2,19 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef } from "react";
 import {
   Download, Mail, Github, Linkedin, ExternalLink, Code2, Globe, Wrench, Users,
-  GraduationCap, Briefcase, Award, Trophy, MapPin, ArrowRight, Sparkles,
+  GraduationCap, Briefcase, Award, Trophy, MapPin, ArrowRight, Sparkles, Phone,
 } from "lucide-react";
 import profileAsset from "@/assets/akshitha-profile.asset.json";
-import { SiReact, SiJavascript, SiHtml5, SiCss, SiGit, SiGithub, SiMongodb, SiExpress, SiNodedotjs, SiTailwindcss, SiPython, SiMysql } from "react-icons/si";
-import { FaJava } from "react-icons/fa";
 import objectDetectionImg from "@/assets/project-object-detection.jpg";
 import restaurantImg from "@/assets/project-restaurant.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Akshitha Roy Kanchuboina — Full Stack Developer" },
-      { name: "description", content: "Portfolio of Akshitha Roy Kanchuboina — Computer Science student and full stack developer building modern, responsive web applications." },
-      { property: "og:title", content: "Akshitha Roy Kanchuboina — Full Stack Developer" },
-      { property: "og:description", content: "Projects, skills, internships and achievements of Akshitha Roy Kanchuboina." },
+      { title: "Akshitha Roy | Developer Portfolio" },
+      { name: "description", content: "Portfolio of Akshitha Roy Kanchuboina — Computer Science Graduate and aspiring Software Developer." },
+      { property: "og:title", content: "Akshitha Roy | Developer Portfolio" },
+      { property: "og:description", content: "Computer Science Graduate and aspiring Software Developer." },
     ],
   }),
   component: Portfolio,
@@ -51,8 +49,9 @@ function useReveal() {
 
 function Nav() {
   const links = [
-    ["About", "about"], ["Skills", "skills"], ["Tech Stack", "tech-stack"],
-    ["Projects", "projects"], ["Education", "education"], ["Experience", "experience"], ["Contact", "contact"],
+    ["About", "about"], ["Skills", "skills"],
+    ["Projects", "projects"], ["Education", "education"], ["Experience", "experience"],
+    ["Certifications", "certifications"], ["Contact", "contact"],
   ] as const;
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-md">
@@ -88,16 +87,16 @@ function Hero() {
           <span className="inline-flex items-center gap-2 rounded-full border border-teal/30 bg-white/70 px-3 py-1 text-xs font-semibold text-teal backdrop-blur">
             <Sparkles className="h-3.5 w-3.5" /> Open to Software Developer Internships
           </span>
-          <h1 className="mt-5 text-[2.5rem] font-extrabold leading-[1.05] text-primary sm:text-5xl md:text-[3.75rem]">
-            Akshitha Roy <br />
+          <h1 className="mt-5 text-4xl font-extrabold leading-[1.08] text-primary sm:text-5xl md:text-[3.5rem]">
+            Akshitha Roy{" "}
             <span className="bg-gradient-to-r from-teal to-sky bg-clip-text text-transparent">Kanchuboina</span>
           </h1>
           <p className="mt-4 text-base font-semibold uppercase tracking-wide text-primary/70 sm:text-lg">
-            Computer Science Student <span className="text-teal">•</span> Full Stack Developer
+            Computer Science Graduate <span className="text-teal">•</span> Aspiring Software Developer
           </p>
           <p className="mt-5 max-w-xl text-base leading-relaxed text-foreground/80 sm:text-lg">
-            I design and build clean, responsive web applications with React, JavaScript and modern
-            tooling — focused on shipping recruiter-ready, production-quality interfaces.
+            I build clean, responsive web applications with React and modern tooling. Passionate about
+            writing quality code and ready to contribute as a software developer.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a href="#projects" className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-elegant transition-transform hover:-translate-y-0.5">
@@ -108,6 +107,17 @@ function Hero() {
             </a>
             <a href="#contact" className="inline-flex items-center gap-2 rounded-full bg-teal px-5 py-3 text-sm font-semibold text-teal-foreground shadow-soft transition-transform hover:-translate-y-0.5">
               <Mail className="h-4 w-4" /> Contact Me
+            </a>
+          </div>
+          <div className="mt-6 flex items-center gap-3">
+            <a href={GITHUB} target="_blank" rel="noreferrer" aria-label="GitHub" className="grid h-10 w-10 place-items-center rounded-full border border-border bg-white text-primary shadow-soft transition-all hover:-translate-y-0.5 hover:border-teal hover:text-teal">
+              <Github className="h-5 w-5" />
+            </a>
+            <a href={LINKEDIN} target="_blank" rel="noreferrer" aria-label="LinkedIn" className="grid h-10 w-10 place-items-center rounded-full border border-border bg-white text-primary shadow-soft transition-all hover:-translate-y-0.5 hover:border-teal hover:text-teal">
+              <Linkedin className="h-5 w-5" />
+            </a>
+            <a href={`mailto:${EMAIL}`} aria-label="Email" className="grid h-10 w-10 place-items-center rounded-full border border-border bg-white text-primary shadow-soft transition-all hover:-translate-y-0.5 hover:border-teal hover:text-teal">
+              <Mail className="h-5 w-5" />
             </a>
           </div>
         </div>
@@ -256,11 +266,8 @@ function Projects() {
                   ))}
                 </div>
                 <div className="mt-6 flex gap-3">
-                  <a href={p.github} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-primary/20 px-4 py-2 text-sm font-semibold text-primary transition-colors hover:border-teal hover:text-teal">
-                    <Github className="h-4 w-4" /> Code
-                  </a>
-                  <a href={p.demo} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-transform hover:-translate-y-0.5">
-                    <ExternalLink className="h-4 w-4" /> Live Demo
+                  <a href={p.github} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-transform hover:-translate-y-0.5 hover:bg-primary/90">
+                    <Github className="h-4 w-4" /> GitHub
                   </a>
                 </div>
               </div>
@@ -338,28 +345,28 @@ function Experience() {
 const CERTS = [
   {
     title: "Cisco — C Programming",
-    desc: "Foundations of C programming: syntax, control flow, functions, pointers and memory management.",
-    link: "https://drive.google.com/file/d/1ZlJMu_3T21Qz4mmtR59fQRQ6fyxcS6-a/view?usp=drive_link",
+    desc: "Foundations of C programming: syntax, control flow, functions, pointers and memory.",
+    link: "https://drive.google.com/file/d/1p3coaD_yhgIP6XI_KqyxNde3493lQW5d/view?usp=drivesdk",
   },
   {
     title: "TCS iON Career Edge",
     desc: "Workplace readiness program covering communication, business etiquette and IT fundamentals.",
-    link: "https://drive.google.com/file/d/1MQwUl4m6QNyK7snyjKJYCOTBLu6Octwn/view?usp=drive_link",
+    link: "https://drive.google.com/file/d/13UKaB3IDcou83DVnWxo8u3J_CBeayORO/view?usp=drivesdk",
   },
   {
     title: "Infosys — Python",
-    desc: "Core Python programming, data structures, OOP and scripting essentials by Infosys Springboard.",
-    link: "https://drive.google.com/file/d/179y33hsK9-wXygJtd89g1AVCEuhoAnqz/view?usp=drive_link",
+    desc: "Core Python programming, data structures, OOP and scripting essentials.",
+    link: "https://drive.google.com/file/d/1dY2bc901WPuqPeZKEz_Bu4wfVnHCdnBh/view?usp=drivesdk",
   },
   {
     title: "HTML5 Application Development",
     desc: "Building modern, semantic and responsive web applications using HTML5, CSS and JavaScript.",
-    link: "https://drive.google.com/file/d/18HMgrOll73VkKwDk8HgZqDCtmhfJhIJO/view?usp=drive_link",
+    link: "https://drive.google.com/file/d/1YaFKVQEyzRIxR1tGQViH8uAkFBZ2VLFR/view?usp=drivesdk",
   },
   {
     title: "DevOps Certification",
     desc: "DevOps lifecycle, CI/CD pipelines, version control and automation tooling fundamentals.",
-    link: "https://drive.google.com/file/d/1OevTpAaslRYOE4lmhQS4DEDqsuV6Ov_v/view?usp=drive_link",
+    link: "https://drive.google.com/file/d/1lQ2Kjgp9O_xgW0lCPbAXZoGZGmdZbYgj/view?usp=drivesdk",
   },
 ];
 
@@ -371,21 +378,23 @@ function Certificates() {
         <SectionTitle eyebrow="Certifications" title="Verified credentials" desc="Programs and certifications that back up my hands-on learning." />
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {CERTS.map((c) => (
-            <div key={c.title} data-reveal className="group flex h-full flex-col rounded-2xl border border-border bg-card p-6 shadow-soft transition-all hover:-translate-y-1 hover:border-teal/40 hover:shadow-elegant">
+            <a
+              key={c.title}
+              href={c.link}
+              target="_blank"
+              rel="noreferrer"
+              data-reveal
+              className="group relative flex h-full flex-col rounded-2xl border border-border bg-card p-6 shadow-soft transition-all hover:-translate-y-1 hover:border-teal/50 hover:shadow-elegant focus:outline-none focus-visible:ring-2 focus-visible:ring-teal"
+            >
               <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-teal/15 to-sky/15 text-teal transition-transform group-hover:scale-110">
                 <Award className="h-6 w-6" />
               </span>
               <h3 className="mt-5 text-base font-bold text-primary">{c.title}</h3>
               <p className="mt-2 flex-1 text-sm text-foreground/70">{c.desc}</p>
-              <a
-                href={c.link}
-                target="_blank"
-                rel="noreferrer"
-                className="mt-5 inline-flex w-fit items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-transform hover:-translate-y-0.5"
-              >
-                <ExternalLink className="h-4 w-4" /> View Certificate
-              </a>
-            </div>
+              <span className="mt-5 inline-flex items-center gap-1 text-xs font-semibold text-teal opacity-0 transition-opacity group-hover:opacity-100">
+                Open certificate <ExternalLink className="h-3.5 w-3.5" />
+              </span>
+            </a>
           ))}
         </div>
       </div>
@@ -425,26 +434,32 @@ function Achievements() {
 function Contact() {
   const ref = useReveal();
   const links = [
-    { icon: Mail, label: "Email", value: EMAIL, href: `mailto:${EMAIL}` },
-    { icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/akshitharoy-kanchuboina", href: LINKEDIN },
-    { icon: Github, label: "GitHub", value: "github.com/akshitharoykanchuboina14", href: GITHUB },
+    { icon: Mail, label: "Email", value: EMAIL, href: `mailto:${EMAIL}`, external: false },
+    { icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/akshitharoy-kanchuboina", href: LINKEDIN, external: true },
+    { icon: Github, label: "GitHub", value: "github.com/akshitharoykanchuboina14", href: GITHUB, external: true },
+    { icon: Phone, label: "Phone", value: "+91 • Available on request", href: `mailto:${EMAIL}`, external: false },
+    { icon: MapPin, label: "Location", value: "India", href: "#", external: false },
   ];
   return (
     <section id="contact" className="section-pad" ref={ref}>
-      <div className="mx-auto max-w-4xl px-5">
-        <div className="relative overflow-hidden rounded-3xl bg-primary p-10 text-primary-foreground shadow-elegant md:p-14" data-reveal>
+      <div className="mx-auto max-w-5xl px-5">
+        <div className="relative overflow-hidden rounded-3xl bg-primary p-8 text-primary-foreground shadow-elegant sm:p-10 md:p-14" data-reveal>
           <div className="pointer-events-none absolute -top-20 -right-20 h-64 w-64 rounded-full bg-teal/30 blur-3xl" />
           <div className="pointer-events-none absolute -bottom-20 -left-20 h-64 w-64 rounded-full bg-sky/30 blur-3xl" />
           <div className="relative">
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-teal">Contact</p>
             <h2 className="mt-2 text-3xl font-bold text-primary-foreground sm:text-4xl">Let's build something great.</h2>
             <p className="mt-3 max-w-xl text-primary-foreground/70">
-              I'm open to internships and entry-level full-stack roles. Drop a message — I'll get back within a day.
+              I'm open to internships and entry-level software developer roles. Drop a message — I'll get back within a day.
             </p>
-            <div className="mt-8 grid gap-4 sm:grid-cols-3">
-              {links.map(({ icon: Icon, label, value, href }) => (
-                <a key={label} href={href} target="_blank" rel="noreferrer"
-                  className="group rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur transition-all hover:-translate-y-1 hover:border-teal/50 hover:bg-white/10">
+            <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {links.map(({ icon: Icon, label, value, href, external }) => (
+                <a
+                  key={label}
+                  href={href}
+                  {...(external ? { target: "_blank", rel: "noreferrer" } : {})}
+                  className="group rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur transition-all hover:-translate-y-1 hover:border-teal/50 hover:bg-white/10"
+                >
                   <span className="grid h-10 w-10 place-items-center rounded-xl bg-teal text-teal-foreground transition-transform group-hover:scale-110">
                     <Icon className="h-5 w-5" />
                   </span>
@@ -479,34 +494,6 @@ function Footer() {
   );
 }
 
-const TECH_STACK = [
-  { Icon: SiHtml5, label: "HTML", color: "#E34F26" },
-  { Icon: SiCss, label: "CSS", color: "#1572B6" },
-  { Icon: SiJavascript, label: "JavaScript", color: "#F7DF1E" },
-  { Icon: SiReact, label: "React", color: "#61DAFB" },
-  { Icon: SiPython, label: "Python", color: "#3776AB" },
-  { Icon: FaJava, label: "Java", color: "#E76F00" },
-  { Icon: SiMysql, label: "SQL", color: "#4479A1" },
-];
-
-function TechStack() {
-  const ref = useReveal();
-  return (
-    <section id="tech-stack" className="section-pad" ref={ref}>
-      <div className="mx-auto max-w-6xl px-5">
-        <SectionTitle eyebrow="Tech Stack" title="Tools & technologies" desc="The stack I reach for when building modern web apps." />
-        <div className="grid grid-cols-3 gap-3 sm:grid-cols-4 sm:gap-4 md:grid-cols-6 lg:grid-cols-7" data-reveal>
-          {TECH_STACK.map(({ Icon, label, color }) => (
-            <div key={label} className="group flex flex-col items-center gap-2 rounded-2xl border border-border bg-card p-4 shadow-soft transition-all hover:-translate-y-1 hover:border-teal/40 hover:shadow-elegant">
-              <Icon className="h-8 w-8 transition-transform group-hover:scale-110" style={{ color }} />
-              <span className="text-xs font-semibold text-primary/80">{label}</span>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
 
 function Portfolio() {
   return (
@@ -516,7 +503,6 @@ function Portfolio() {
         <Hero />
         <About />
         <Skills />
-        <TechStack />
         <Projects />
         <Education />
         <Experience />
