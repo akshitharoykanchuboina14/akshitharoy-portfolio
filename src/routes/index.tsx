@@ -434,26 +434,32 @@ function Achievements() {
 function Contact() {
   const ref = useReveal();
   const links = [
-    { icon: Mail, label: "Email", value: EMAIL, href: `mailto:${EMAIL}` },
-    { icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/akshitharoy-kanchuboina", href: LINKEDIN },
-    { icon: Github, label: "GitHub", value: "github.com/akshitharoykanchuboina14", href: GITHUB },
+    { icon: Mail, label: "Email", value: EMAIL, href: `mailto:${EMAIL}`, external: false },
+    { icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/akshitharoy-kanchuboina", href: LINKEDIN, external: true },
+    { icon: Github, label: "GitHub", value: "github.com/akshitharoykanchuboina14", href: GITHUB, external: true },
+    { icon: Phone, label: "Phone", value: "+91 • Available on request", href: `mailto:${EMAIL}`, external: false },
+    { icon: MapPin, label: "Location", value: "India", href: "#", external: false },
   ];
   return (
     <section id="contact" className="section-pad" ref={ref}>
-      <div className="mx-auto max-w-4xl px-5">
-        <div className="relative overflow-hidden rounded-3xl bg-primary p-10 text-primary-foreground shadow-elegant md:p-14" data-reveal>
+      <div className="mx-auto max-w-5xl px-5">
+        <div className="relative overflow-hidden rounded-3xl bg-primary p-8 text-primary-foreground shadow-elegant sm:p-10 md:p-14" data-reveal>
           <div className="pointer-events-none absolute -top-20 -right-20 h-64 w-64 rounded-full bg-teal/30 blur-3xl" />
           <div className="pointer-events-none absolute -bottom-20 -left-20 h-64 w-64 rounded-full bg-sky/30 blur-3xl" />
           <div className="relative">
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-teal">Contact</p>
             <h2 className="mt-2 text-3xl font-bold text-primary-foreground sm:text-4xl">Let's build something great.</h2>
             <p className="mt-3 max-w-xl text-primary-foreground/70">
-              I'm open to internships and entry-level full-stack roles. Drop a message — I'll get back within a day.
+              I'm open to internships and entry-level software developer roles. Drop a message — I'll get back within a day.
             </p>
-            <div className="mt-8 grid gap-4 sm:grid-cols-3">
-              {links.map(({ icon: Icon, label, value, href }) => (
-                <a key={label} href={href} target="_blank" rel="noreferrer"
-                  className="group rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur transition-all hover:-translate-y-1 hover:border-teal/50 hover:bg-white/10">
+            <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {links.map(({ icon: Icon, label, value, href, external }) => (
+                <a
+                  key={label}
+                  href={href}
+                  {...(external ? { target: "_blank", rel: "noreferrer" } : {})}
+                  className="group rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur transition-all hover:-translate-y-1 hover:border-teal/50 hover:bg-white/10"
+                >
                   <span className="grid h-10 w-10 place-items-center rounded-xl bg-teal text-teal-foreground transition-transform group-hover:scale-110">
                     <Icon className="h-5 w-5" />
                   </span>
