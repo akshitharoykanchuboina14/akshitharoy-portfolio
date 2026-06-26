@@ -486,7 +486,6 @@ function Portfolio() {
         <Hero />
         <About />
         <Skills />
-        <Skills />
         <Projects />
         <Education />
         <Experience />
