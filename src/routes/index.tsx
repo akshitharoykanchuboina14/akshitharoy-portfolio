@@ -20,10 +20,10 @@ export const Route = createFileRoute("/")({
   component: Portfolio,
 });
 
-const EMAIL = "akshitharoy@example.com";
+const EMAIL = "akshitharoy1405@gmail.com";
 const GITHUB = "https://github.com/akshitharoykanchuboina14";
 const LINKEDIN = "https://www.linkedin.com/in/akshitharoy-kanchuboina-6102b8326";
-const RESUME = "https://drive.google.com/file/d/1bUlMCCYB3L1PC1VysSd6s8ALd-cbPooQ/view?usp=drivesdk";
+const RESUME = "https://drive.google.com/file/d/1ZNNbQTxyVGf6TpakssAKMw1Tflz4CTIn/view?usp=drivesdk";
 
 function useReveal() {
   const ref = useRef<HTMLDivElement>(null);
@@ -279,7 +279,7 @@ function Projects() {
   );
 }
 
-type TLItem = { year: string; title: string; place: string; detail?: string };
+type TLItem = { year?: string; title: string; place?: string; detail?: string; tech?: string[]; date?: string };
 function Timeline({ items }: { items: TLItem[] }) {
   return (
     <ol className="relative space-y-8 border-l-2 border-dashed border-border pl-8">
@@ -288,13 +288,25 @@ function Timeline({ items }: { items: TLItem[] }) {
           <span className="absolute -left-[42px] grid h-6 w-6 place-items-center rounded-full bg-gradient-to-br from-teal to-sky text-white shadow-soft ring-4 ring-background">
             <span className="h-2 w-2 rounded-full bg-white" />
           </span>
-          <div className="rounded-2xl border border-border bg-card p-6 shadow-soft transition-all hover:-translate-y-0.5 hover:border-teal/40 hover:shadow-elegant">
-            <p className="text-xs font-bold uppercase tracking-widest text-teal">{it.year}</p>
+          <div className="flex flex-col rounded-2xl border border-border bg-card p-6 shadow-soft transition-all hover:-translate-y-0.5 hover:border-teal/40 hover:shadow-elegant">
+            {it.year && <p className="text-xs font-bold uppercase tracking-widest text-teal">{it.year}</p>}
             <h3 className="mt-1 text-lg font-bold">{it.title}</h3>
-            <p className="mt-1 flex items-center gap-1 text-sm text-foreground/70">
-              <MapPin className="h-3.5 w-3.5" /> {it.place}
-            </p>
-            {it.detail && <p className="mt-2 text-sm font-medium text-primary">{it.detail}</p>}
+            {it.date && <p className="mt-1 text-sm text-foreground/60">{it.date}</p>}
+            {it.place && (
+              <p className="mt-1 flex items-center gap-1 text-sm text-foreground/70">
+                <MapPin className="h-3.5 w-3.5" /> {it.place}
+              </p>
+            )}
+            {it.tech && (
+              <div className="mt-3 flex flex-wrap gap-2">
+                {it.tech.map((t) => (
+                  <span key={t} className="rounded-full bg-teal/10 px-2.5 py-1 text-xs font-semibold text-teal">
+                    {t}
+                  </span>
+                ))}
+              </div>
+            )}
+            {it.detail && <p className="mt-3 text-sm font-medium text-primary/90">{it.detail}</p>}
           </div>
         </li>
       ))}
@@ -325,9 +337,9 @@ function Education() {
 function Experience() {
   const ref = useReveal();
   const items: TLItem[] = [
-    { year: "Internship", title: "Data Analytics Intern", place: "Python • Pandas, NumPy, Matplotlib", detail: "Worked on data analysis using Python, including data cleaning, processing, exploratory data analysis, and visualization using Python libraries." },
-    { year: "Internship", title: "MERN Full Stack Development", place: "Hands-on training in MongoDB, Express, React, Node.js" },
-    { year: "Internship", title: "Full Stack Java Training", place: "Backend fundamentals with Java, SQL and REST APIs" },
+    { title: "Data Analytics Intern", tech: ["Python", "Pandas", "NumPy", "Matplotlib"], detail: "Worked on data cleaning, data processing, exploratory data analysis, and data visualization using Python libraries to extract meaningful insights." },
+    { title: "MERN Full Stack Development", tech: ["MongoDB", "Express.js", "React", "Node.js"], detail: "Hands-on experience building full stack web applications using the MERN stack, including frontend development and backend integration." },
+    { title: "Full Stack Java Training", tech: ["Java", "SQL", "REST APIs"], detail: "Learned backend development fundamentals, Java programming, database concepts, and working with REST APIs." },
   ];
   return (
     <section id="experience" className="section-pad" ref={ref}>
@@ -433,12 +445,12 @@ function Achievements() {
 
 function Contact() {
   const ref = useReveal();
-  const links = [
-    { icon: Mail, label: "Email", value: EMAIL, href: `mailto:${EMAIL}`, external: false },
-    { icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/akshitharoy-kanchuboina", href: LINKEDIN, external: true },
-    { icon: Github, label: "GitHub", value: "github.com/akshitharoykanchuboina14", href: GITHUB, external: true },
-    { icon: Phone, label: "Phone", value: "+91 • Available on request", href: `mailto:${EMAIL}`, external: false },
-    { icon: MapPin, label: "Location", value: "India", href: "#", external: false },
+  const cards = [
+    { icon: Mail, label: "Email", value: EMAIL, href: `mailto:${EMAIL}` },
+    { icon: Phone, label: "Phone", value: "8074721377", href: "tel:8074721377" },
+    { icon: MapPin, label: "Location", value: "Visakhapatnam", href: "#" },
+    { icon: Linkedin, label: "LinkedIn", value: "LinkedIn Profile", href: LINKEDIN, external: true },
+    { icon: Github, label: "GitHub", value: "GitHub Profile", href: GITHUB, external: true },
   ];
   return (
     <section id="contact" className="section-pad" ref={ref}>
@@ -453,20 +465,30 @@ function Contact() {
               I'm open to internships and entry-level software developer roles. Drop a message — I'll get back within a day.
             </p>
             <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {links.map(({ icon: Icon, label, value, href, external }) => (
+              {cards.map(({ icon: Icon, label, value, href, external }) => (
                 <a
                   key={label}
                   href={href}
                   {...(external ? { target: "_blank", rel: "noreferrer" } : {})}
-                  className="group rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur transition-all hover:-translate-y-1 hover:border-teal/50 hover:bg-white/10"
+                  className="group flex flex-col rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur transition-all hover:-translate-y-1 hover:border-teal/50 hover:bg-white/10"
                 >
                   <span className="grid h-10 w-10 place-items-center rounded-xl bg-teal text-teal-foreground transition-transform group-hover:scale-110">
                     <Icon className="h-5 w-5" />
                   </span>
                   <p className="mt-4 text-xs uppercase tracking-widest text-primary-foreground/60">{label}</p>
-                  <p className="mt-1 truncate text-sm font-semibold">{value}</p>
+                  <p className="mt-1 text-sm font-semibold">{value}</p>
                 </a>
               ))}
+            </div>
+            <div className="mt-8">
+              <a
+                href={RESUME}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 rounded-full bg-teal px-6 py-3 text-sm font-semibold text-teal-foreground shadow-soft transition-transform hover:-translate-y-0.5"
+              >
+                <Download className="h-4 w-4" /> Download Resume
+              </a>
             </div>
           </div>
         </div>
