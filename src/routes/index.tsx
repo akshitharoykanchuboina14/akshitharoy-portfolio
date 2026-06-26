@@ -266,11 +266,8 @@ function Projects() {
                   ))}
                 </div>
                 <div className="mt-6 flex gap-3">
-                  <a href={p.github} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-primary/20 px-4 py-2 text-sm font-semibold text-primary transition-colors hover:border-teal hover:text-teal">
-                    <Github className="h-4 w-4" /> Code
-                  </a>
-                  <a href={p.demo} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-transform hover:-translate-y-0.5">
-                    <ExternalLink className="h-4 w-4" /> Live Demo
+                  <a href={p.github} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-transform hover:-translate-y-0.5 hover:bg-primary/90">
+                    <Github className="h-4 w-4" /> GitHub
                   </a>
                 </div>
               </div>
