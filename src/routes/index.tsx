@@ -11,10 +11,10 @@ import restaurantImg from "@/assets/project-restaurant.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Akshitha Roy Kanchuboina — Full Stack Developer" },
-      { name: "description", content: "Portfolio of Akshitha Roy Kanchuboina — Computer Science student and full stack developer building modern, responsive web applications." },
-      { property: "og:title", content: "Akshitha Roy Kanchuboina — Full Stack Developer" },
-      { property: "og:description", content: "Projects, skills, internships and achievements of Akshitha Roy Kanchuboina." },
+      { title: "Akshitha Roy | Developer Portfolio" },
+      { name: "description", content: "Portfolio of Akshitha Roy Kanchuboina — Computer Science Graduate and aspiring Software Developer." },
+      { property: "og:title", content: "Akshitha Roy | Developer Portfolio" },
+      { property: "og:description", content: "Computer Science Graduate and aspiring Software Developer." },
     ],
   }),
   component: Portfolio,
