@@ -2,11 +2,9 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef } from "react";
 import {
   Download, Mail, Github, Linkedin, ExternalLink, Code2, Globe, Wrench, Users,
-  GraduationCap, Briefcase, Award, Trophy, MapPin, ArrowRight, Sparkles,
+  GraduationCap, Briefcase, Award, Trophy, MapPin, ArrowRight, Sparkles, Phone,
 } from "lucide-react";
 import profileAsset from "@/assets/akshitha-profile.asset.json";
-import { SiReact, SiJavascript, SiHtml5, SiCss, SiGit, SiGithub, SiMongodb, SiExpress, SiNodedotjs, SiTailwindcss, SiPython, SiMysql } from "react-icons/si";
-import { FaJava } from "react-icons/fa";
 import objectDetectionImg from "@/assets/project-object-detection.jpg";
 import restaurantImg from "@/assets/project-restaurant.jpg";
 
