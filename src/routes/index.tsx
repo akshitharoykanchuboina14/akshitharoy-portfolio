@@ -126,12 +126,12 @@ function Hero() {
             <div className="absolute inset-0 -m-3 rounded-full bg-gradient-to-tr from-teal to-sky blur-xl opacity-60" />
             <div className="relative float-slow rounded-full bg-white p-2 shadow-elegant ring-1 ring-border">
               <div className="overflow-hidden rounded-full">
-              <img
+                <img
                   src={profileAsset.url}
                   alt="Akshitha Roy Kanchuboina"
                   width={320}
                   height={320}
-                  className="h-64 w-64 object-cover object-[center_25%] sm:h-72 sm:w-72 md:h-80 md:w-80"
+                  className="h-56 w-56 object-cover sm:h-64 sm:w-64 md:h-72 md:w-72"
                 />
               </div>
             </div>
