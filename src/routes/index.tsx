@@ -132,6 +132,7 @@ function Hero() {
                   width={320}
                   height={320}
                   className="h-56 w-56 object-cover sm:h-64 sm:w-64 md:h-72 md:w-72"
+                  style={{ objectPosition: "center 30%" }}
                 />
               </div>
             </div>
