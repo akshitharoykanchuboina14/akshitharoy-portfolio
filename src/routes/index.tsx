@@ -131,7 +131,7 @@ function Hero() {
                   alt="Akshitha Roy Kanchuboina"
                   width={320}
                   height={320}
-                  className="h-64 w-64 object-cover object-top sm:h-72 sm:w-72 md:h-80 md:w-80"
+                  className="h-64 w-64 object-cover object-[center_25%] sm:h-72 sm:w-72 md:h-80 md:w-80"
                 />
               </div>
             </div>
