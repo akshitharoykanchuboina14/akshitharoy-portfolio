@@ -125,15 +125,15 @@ function Hero() {
           <div className="relative">
             <div className="absolute inset-0 -m-3 rounded-full bg-gradient-to-tr from-teal to-sky blur-xl opacity-60" />
             <div className="relative float-slow rounded-full bg-white p-2 shadow-elegant ring-1 ring-border">
-              <div className="overflow-hidden rounded-full">
-                <img
-                  src={profileAsset.url}
-                  alt="Akshitha Roy Kanchuboina"
-                  width={320}
-                  height={320}
-                  className="h-56 w-56 object-cover sm:h-64 sm:w-64 md:h-72 md:w-72"
-                />
-              </div>
+            <div className="overflow-hidden rounded-full bg-white">
+              <img
+                src={profileAsset.url}
+                alt="Akshitha Roy Kanchuboina"
+                width={320}
+                height={320}
+                className="h-56 w-56 object-contain sm:h-64 sm:w-64 md:h-72 md:w-72"
+              />
+            </div>
             </div>
             <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 rounded-full bg-primary px-3 py-1 text-xs font-semibold text-primary-foreground shadow-soft">
               CGPA 9.0 / 10
