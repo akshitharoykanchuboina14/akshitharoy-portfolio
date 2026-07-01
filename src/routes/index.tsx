@@ -127,7 +127,7 @@ function Hero() {
             <div className="relative float-slow rounded-full bg-white p-2 shadow-elegant ring-1 ring-border">
             <div className="overflow-hidden rounded-full bg-white">
               <img
-                src={profileImage}
+                src={profileImage.url}
                 alt="Akshitha Roy Kanchuboina"
                 width={320}
                 height={320}
