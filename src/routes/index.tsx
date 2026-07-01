@@ -4,7 +4,7 @@ import {
   Download, Mail, Github, Linkedin, ExternalLink, Code2, Globe, Wrench, Users,
   GraduationCap, Briefcase, Award, Trophy, MapPin, ArrowRight, Sparkles, Phone,
 } from "lucide-react";
-import profileAsset from "@/assets/akshitha-profile-new.asset.json";
+import profileImage from "@/assets/akshitha-profile-portrait.png";
 import objectDetectionImg from "@/assets/project-object-detection.jpg";
 import restaurantImg from "@/assets/project-restaurant.jpg";
 
@@ -127,11 +127,11 @@ function Hero() {
             <div className="relative float-slow rounded-full bg-white p-2 shadow-elegant ring-1 ring-border">
             <div className="overflow-hidden rounded-full bg-white">
               <img
-                src={profileAsset.url}
+                src={profileImage}
                 alt="Akshitha Roy Kanchuboina"
                 width={320}
                 height={320}
-                className="h-56 w-56 object-contain sm:h-64 sm:w-64 md:h-72 md:w-72"
+                className="h-56 w-56 object-cover object-center sm:h-64 sm:w-64 md:h-72 md:w-72"
               />
             </div>
             </div>
