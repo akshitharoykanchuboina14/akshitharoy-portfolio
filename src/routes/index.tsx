@@ -4,7 +4,7 @@ import {
   Download, Mail, Github, Linkedin, ExternalLink, Code2, Globe, Wrench, Users,
   GraduationCap, Briefcase, Award, Trophy, MapPin, ArrowRight, Sparkles, Phone,
 } from "lucide-react";
-import profileImage from "@/assets/akshitha-profile-latest.jpg.asset.json";
+import profileImage from "@/assets/akshitha-profile-new.jpg.asset.json";
 import objectDetectionImg from "@/assets/project-object-detection.jpg";
 import restaurantImg from "@/assets/project-restaurant.jpg";
 
@@ -23,7 +23,7 @@ export const Route = createFileRoute("/")({
 const EMAIL = "akshitharoy1405@gmail.com";
 const GITHUB = "https://github.com/akshitharoykanchuboina14";
 const LINKEDIN = "https://www.linkedin.com/in/akshitharoy-kanchuboina-6102b8326";
-const RESUME = "https://drive.google.com/file/d/145b1cBH2g3tVfZ1VlGKqH0SAPOQEgJWn/view?usp=drivesdk";
+const RESUME = "https://drive.google.com/file/d/1ZNNbQTxyVGf6TpakssAKMw1Tflz4CTIn/view?usp=drivesdk";
 
 function useReveal() {
   const ref = useRef<HTMLDivElement>(null);
