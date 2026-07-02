@@ -356,29 +356,29 @@ function Experience() {
 
 const CERTS = [
   {
-    title: "Cisco — C Programming",
-    desc: "Foundations of C programming: syntax, control flow, functions, pointers and memory.",
-    link: "https://drive.google.com/file/d/1p3coaD_yhgIP6XI_KqyxNde3493lQW5d/view?usp=drivesdk",
+    title: "Cisco Certificate",
+    desc: "Cisco certification validating networking and IT fundamentals with practical problem-solving skills.",
+    link: "https://drive.google.com/file/d/1ZlJMu_3T21Qz4mmtR59fQRQ6fyxcS6-a/view?usp=drive_link",
   },
   {
-    title: "TCS iON Career Edge",
-    desc: "Workplace readiness program covering communication, business etiquette and IT fundamentals.",
-    link: "https://drive.google.com/file/d/13UKaB3IDcou83DVnWxo8u3J_CBeayORO/view?usp=drivesdk",
+    title: "TCS Certificate",
+    desc: "TCS iON Career Edge program covering communication, business etiquette, and core IT workplace readiness.",
+    link: "https://drive.google.com/file/d/1MQwUl4m6QNyK7snyjKJYCOTBLu6Octwn/view?usp=drive_link",
   },
   {
-    title: "Infosys — Python",
-    desc: "Core Python programming, data structures, OOP and scripting essentials.",
-    link: "https://drive.google.com/file/d/1dY2bc901WPuqPeZKEz_Bu4wfVnHCdnBh/view?usp=drivesdk",
+    title: "Infosys Certificate",
+    desc: "Infosys certification in Python programming, covering data structures, OOP, and real-world scripting.",
+    link: "https://drive.google.com/file/d/179y33hsK9-wXygJtd89g1AVCEuhoAnqz/view?usp=drive_link",
   },
   {
-    title: "HTML5 Application Development",
-    desc: "Building modern, semantic and responsive web applications using HTML5, CSS and JavaScript.",
-    link: "https://drive.google.com/file/d/1YaFKVQEyzRIxR1tGQViH8uAkFBZ2VLFR/view?usp=drivesdk",
+    title: "HTML5 Certificate",
+    desc: "HTML5 application development credential focusing on semantic markup, modern APIs, and responsive design.",
+    link: "https://drive.google.com/file/d/18HMgrOll73VkKwDk8HgZqDCtmhfJhIJO/view?usp=drive_link",
   },
   {
-    title: "DevOps Certification",
-    desc: "DevOps lifecycle, CI/CD pipelines, version control and automation tooling fundamentals.",
-    link: "https://drive.google.com/file/d/1lQ2Kjgp9O_xgW0lCPbAXZoGZGmdZbYgj/view?usp=drivesdk",
+    title: "DevOps Certificate",
+    desc: "DevOps fundamentals certification covering CI/CD pipelines, version control, automation, and collaborative workflows.",
+    link: "https://drive.google.com/file/d/1OevTpAaslRYOE4lmhQS4DEDqsuV6Ov_v/view?usp=drive_link",
   },
 ];
 
