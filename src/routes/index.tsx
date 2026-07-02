@@ -390,23 +390,25 @@ function Certificates() {
         <SectionTitle eyebrow="Certifications" title="Verified credentials" desc="Programs and certifications that back up my hands-on learning." />
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {CERTS.map((c) => (
-            <a
+            <div
               key={c.title}
-              href={c.link}
-              target="_blank"
-              rel="noreferrer"
               data-reveal
-              className="group relative flex h-full flex-col rounded-2xl border border-border bg-card p-6 shadow-soft transition-all hover:-translate-y-1 hover:border-teal/50 hover:shadow-elegant focus:outline-none focus-visible:ring-2 focus-visible:ring-teal"
+              className="group relative flex h-full flex-col rounded-2xl border border-border bg-card p-6 shadow-soft transition-all hover:-translate-y-1 hover:border-teal/50 hover:shadow-elegant"
             >
               <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-teal/15 to-sky/15 text-teal transition-transform group-hover:scale-110">
                 <Award className="h-6 w-6" />
               </span>
               <h3 className="mt-5 text-base font-bold text-primary">{c.title}</h3>
               <p className="mt-2 flex-1 text-sm text-foreground/70">{c.desc}</p>
-              <span className="mt-5 inline-flex items-center gap-1 text-xs font-semibold text-teal opacity-0 transition-opacity group-hover:opacity-100">
-                Open certificate <ExternalLink className="h-3.5 w-3.5" />
-              </span>
-            </a>
+              <a
+                href={c.link}
+                target="_blank"
+                rel="noreferrer"
+                className="mt-5 inline-flex items-center gap-2 self-start rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-transform hover:-translate-y-0.5 hover:bg-primary/90"
+              >
+                View Certificate <ExternalLink className="h-4 w-4" />
+              </a>
+            </div>
           ))}
         </div>
       </div>
