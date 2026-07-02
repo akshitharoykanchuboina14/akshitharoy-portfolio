@@ -356,29 +356,29 @@ function Experience() {
 
 const CERTS = [
   {
-    title: "Cisco — C Programming",
-    desc: "Foundations of C programming: syntax, control flow, functions, pointers and memory.",
-    link: "https://drive.google.com/file/d/1p3coaD_yhgIP6XI_KqyxNde3493lQW5d/view?usp=drivesdk",
+    title: "Cisco Certificate",
+    desc: "Cisco certification validating networking and IT fundamentals with practical problem-solving skills.",
+    link: "https://drive.google.com/file/d/1ZlJMu_3T21Qz4mmtR59fQRQ6fyxcS6-a/view?usp=drive_link",
   },
   {
-    title: "TCS iON Career Edge",
-    desc: "Workplace readiness program covering communication, business etiquette and IT fundamentals.",
-    link: "https://drive.google.com/file/d/13UKaB3IDcou83DVnWxo8u3J_CBeayORO/view?usp=drivesdk",
+    title: "TCS Certificate",
+    desc: "TCS iON Career Edge program covering communication, business etiquette, and core IT workplace readiness.",
+    link: "https://drive.google.com/file/d/1MQwUl4m6QNyK7snyjKJYCOTBLu6Octwn/view?usp=drive_link",
   },
   {
-    title: "Infosys — Python",
-    desc: "Core Python programming, data structures, OOP and scripting essentials.",
-    link: "https://drive.google.com/file/d/1dY2bc901WPuqPeZKEz_Bu4wfVnHCdnBh/view?usp=drivesdk",
+    title: "Infosys Certificate",
+    desc: "Infosys certification in Python programming, covering data structures, OOP, and real-world scripting.",
+    link: "https://drive.google.com/file/d/179y33hsK9-wXygJtd89g1AVCEuhoAnqz/view?usp=drive_link",
   },
   {
-    title: "HTML5 Application Development",
-    desc: "Building modern, semantic and responsive web applications using HTML5, CSS and JavaScript.",
-    link: "https://drive.google.com/file/d/1YaFKVQEyzRIxR1tGQViH8uAkFBZ2VLFR/view?usp=drivesdk",
+    title: "HTML5 Certificate",
+    desc: "HTML5 application development credential focusing on semantic markup, modern APIs, and responsive design.",
+    link: "https://drive.google.com/file/d/18HMgrOll73VkKwDk8HgZqDCtmhfJhIJO/view?usp=drive_link",
   },
   {
-    title: "DevOps Certification",
-    desc: "DevOps lifecycle, CI/CD pipelines, version control and automation tooling fundamentals.",
-    link: "https://drive.google.com/file/d/1lQ2Kjgp9O_xgW0lCPbAXZoGZGmdZbYgj/view?usp=drivesdk",
+    title: "DevOps Certificate",
+    desc: "DevOps fundamentals certification covering CI/CD pipelines, version control, automation, and collaborative workflows.",
+    link: "https://drive.google.com/file/d/1OevTpAaslRYOE4lmhQS4DEDqsuV6Ov_v/view?usp=drive_link",
   },
 ];
 
@@ -390,23 +390,25 @@ function Certificates() {
         <SectionTitle eyebrow="Certifications" title="Verified credentials" desc="Programs and certifications that back up my hands-on learning." />
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {CERTS.map((c) => (
-            <a
+            <div
               key={c.title}
-              href={c.link}
-              target="_blank"
-              rel="noreferrer"
               data-reveal
-              className="group relative flex h-full flex-col rounded-2xl border border-border bg-card p-6 shadow-soft transition-all hover:-translate-y-1 hover:border-teal/50 hover:shadow-elegant focus:outline-none focus-visible:ring-2 focus-visible:ring-teal"
+              className="group relative flex h-full flex-col rounded-2xl border border-border bg-card p-6 shadow-soft transition-all hover:-translate-y-1 hover:border-teal/50 hover:shadow-elegant"
             >
               <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-teal/15 to-sky/15 text-teal transition-transform group-hover:scale-110">
                 <Award className="h-6 w-6" />
               </span>
               <h3 className="mt-5 text-base font-bold text-primary">{c.title}</h3>
               <p className="mt-2 flex-1 text-sm text-foreground/70">{c.desc}</p>
-              <span className="mt-5 inline-flex items-center gap-1 text-xs font-semibold text-teal opacity-0 transition-opacity group-hover:opacity-100">
-                Open certificate <ExternalLink className="h-3.5 w-3.5" />
-              </span>
-            </a>
+              <a
+                href={c.link}
+                target="_blank"
+                rel="noreferrer"
+                className="mt-5 inline-flex items-center gap-2 self-start rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-transform hover:-translate-y-0.5 hover:bg-primary/90"
+              >
+                View Certificate <ExternalLink className="h-4 w-4" />
+              </a>
+            </div>
           ))}
         </div>
       </div>
