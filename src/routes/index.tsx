@@ -4,7 +4,7 @@ import {
   Download, Mail, Github, Linkedin, ExternalLink, Code2, Globe, Wrench, Users,
   GraduationCap, Briefcase, Award, Trophy, MapPin, ArrowRight, Sparkles, Phone,
 } from "lucide-react";
-import profileImage from "@/assets/akshitha-profile-new.jpg.asset.json";
+import profileImage from "@/assets/akshitha-profile-v2.jpg.asset.json";
 import objectDetectionImg from "@/assets/project-object-detection.jpg";
 import restaurantImg from "@/assets/project-restaurant.jpg";
 
