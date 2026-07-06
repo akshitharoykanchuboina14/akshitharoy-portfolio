@@ -129,9 +129,9 @@ function Hero() {
                 <img
                   src={profileImage.url}
                   alt="Akshitha Roy Kanchuboina"
-                  width={260}
-                  height={260}
-                  className="h-[170px] w-[170px] object-contain object-center md:h-[260px] md:w-[260px]"
+                  width={240}
+                  height={240}
+                  className="h-[170px] w-[170px] object-cover object-top md:h-[240px] md:w-[240px]"
                 />
               </div>
             </div>
