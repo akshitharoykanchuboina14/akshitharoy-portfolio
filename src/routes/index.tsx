@@ -82,7 +82,7 @@ function Hero() {
     <section id="top" className="relative overflow-hidden" style={{ background: "var(--gradient-hero)" }}>
       <div className="pointer-events-none absolute -top-24 -right-24 h-72 w-72 rounded-full bg-teal/20 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-sky/20 blur-3xl" />
-      <div className="mx-auto grid max-w-6xl items-center gap-8 px-5 py-12 md:grid-cols-[1.25fr_1fr] md:gap-12 md:py-24">
+      <div className="mx-auto grid max-w-6xl items-center gap-8 px-5 py-10 md:grid-cols-[1.25fr_1fr] md:gap-12 md:py-14">
         <div className="fade-up">
           <span className="inline-flex items-center gap-2 rounded-full border border-teal/30 bg-white/70 px-3 py-1 text-xs font-semibold text-teal backdrop-blur">
             <Sparkles className="h-3.5 w-3.5" /> Open to Software Developer Internships
@@ -121,24 +121,24 @@ function Hero() {
             </a>
           </div>
         </div>
-        <div className="fade-up flex justify-center md:justify-end" style={{ animationDelay: "120ms" }}>
+        <div className="fade-up flex flex-col items-center md:items-end" style={{ animationDelay: "120ms" }}>
           <div className="relative">
             <div className="absolute inset-0 -m-3 rounded-full bg-gradient-to-tr from-teal to-sky blur-xl opacity-60" />
             <div className="relative float-slow rounded-full bg-white p-2 shadow-elegant ring-1 ring-border">
-            <div className="overflow-hidden rounded-full bg-white">
-              <img
-                src={profileImage.url}
-                alt="Akshitha Roy Kanchuboina"
-                width={320}
-                height={320}
-                className="h-56 w-56 object-cover object-center sm:h-64 sm:w-64 md:h-72 md:w-72"
-              />
+              <div className="overflow-hidden rounded-full bg-white">
+                <img
+                  src={profileImage.url}
+                  alt="Akshitha Roy Kanchuboina"
+                  width={260}
+                  height={260}
+                  className="h-[170px] w-[170px] object-contain object-center md:h-[260px] md:w-[260px]"
+                />
+              </div>
             </div>
-            </div>
-            <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 rounded-full bg-primary px-3 py-1 text-xs font-semibold text-primary-foreground shadow-soft">
-              CGPA 9.0 / 10
-            </span>
           </div>
+          <span className="mt-3 rounded-full bg-primary px-3 py-1 text-xs font-semibold text-primary-foreground shadow-soft">
+            CGPA 9.0 / 10
+          </span>
         </div>
       </div>
     </section>
