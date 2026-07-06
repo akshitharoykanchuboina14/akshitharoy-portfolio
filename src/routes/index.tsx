@@ -141,7 +141,6 @@ function Hero() {
           </span>
         </div>
       </div>
-      </div>
     </section>
   );
 }
