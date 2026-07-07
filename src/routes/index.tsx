@@ -4,7 +4,7 @@ import {
   Download, Mail, Github, Linkedin, ExternalLink, Code2, Globe, Wrench, Users,
   GraduationCap, Briefcase, Award, Trophy, MapPin, ArrowRight, Sparkles, Phone,
 } from "lucide-react";
-import profileImage from "@/assets/akshitha-profile-v4.jpg.asset.json";
+import profileImage from "@/assets/akshitha-profile-v5.png.asset.json";
 import objectDetectionImg from "@/assets/project-object-detection.jpg";
 import restaurantImg from "@/assets/project-restaurant.jpg";
 
@@ -131,7 +131,7 @@ function Hero() {
                   alt="Akshitha Roy Kanchuboina"
                   width={240}
                   height={240}
-                  className="h-[170px] w-[170px] object-cover object-top md:h-[240px] md:w-[240px]"
+                  className="h-[170px] w-[170px] object-cover object-center md:h-[240px] md:w-[240px]"
                 />
               </div>
             </div>
