@@ -518,7 +518,7 @@ function Footer() {
           <a href={GITHUB} target="_blank" rel="noreferrer" aria-label="GitHub" className="transition-colors hover:text-teal">
             <Github className="h-5 w-5" />
           </a>
-          <p className="hidden sm:block">Built with React & Tailwind.</p>
+          <p className="hidden sm:block">Built with React & Lovable.</p>
         </div>
       </div>
     </footer>
