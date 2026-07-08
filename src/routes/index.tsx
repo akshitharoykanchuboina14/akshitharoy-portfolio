@@ -166,10 +166,10 @@ function About() {
         <SectionTitle eyebrow="About" title="A bit about me" />
         <div className="mx-auto max-w-4xl rounded-3xl border border-border bg-card p-8 shadow-soft md:p-12" data-reveal>
           <p className="text-lg leading-relaxed text-foreground/80">
-            I'm a <span className="font-semibold text-primary">Computer Science</span> student and aspiring
-            full stack developer. I love turning ideas into clean, responsive web apps with React,
-            JavaScript and modern tools — and I'm actively seeking a <span className="font-semibold text-primary">software developer internship</span> where
-            I can contribute, learn fast, and grow into a well-rounded engineer.
+            I'm a <span className="font-semibold text-primary">Bachelor of Computer Science</span> graduate
+            passionate about software development and web technologies. I enjoy building responsive web
+            applications using React, Java, JavaScript, SQL, HTML, CSS, and Python. I'm a quick learner,
+            enjoy solving problems, and I'm excited to start my career in the IT industry.
           </p>
           <div className="mt-8 grid gap-4 sm:grid-cols-4">
             {[
