@@ -93,11 +93,13 @@ function Hero() {
             <span className="bg-gradient-to-r from-teal to-sky bg-clip-text text-transparent">Kanchuboina</span>
           </h1>
           <p className="mt-4 text-base font-semibold uppercase tracking-wide text-primary/70 sm:text-lg">
-            Computer Science Graduate <span className="text-teal">•</span> Aspiring Software Developer
+            Bachelor of Computer Science Graduate <span className="text-teal">•</span> Aspiring Software Developer
           </p>
           <p className="mt-5 max-w-xl text-base leading-relaxed text-foreground/80 sm:text-lg">
-            I build clean, responsive web applications with React and modern tooling. Passionate about
-            writing quality code and ready to contribute as a software developer.
+            I'm a Bachelor of Computer Science graduate passionate about software development and web
+            technologies. I enjoy building responsive web applications using React, Java, JavaScript, SQL,
+            HTML, CSS, and Python. I'm eager to learn, improve my skills, and contribute to a professional
+            software development team.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a href="#projects" className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-elegant transition-transform hover:-translate-y-0.5">
@@ -130,9 +132,9 @@ function Hero() {
                 <img
                   src={profileImage.url}
                   alt="Akshitha Roy Kanchuboina"
-                  width={240}
-                  height={240}
-                  className="h-[170px] w-[170px] object-cover object-center md:h-[240px] md:w-[240px]"
+                  width={220}
+                  height={220}
+                  className="h-[150px] w-[150px] object-cover object-center md:h-[210px] md:w-[210px]"
                 />
               </div>
             </div>
@@ -164,10 +166,10 @@ function About() {
         <SectionTitle eyebrow="About" title="A bit about me" />
         <div className="mx-auto max-w-4xl rounded-3xl border border-border bg-card p-8 shadow-soft md:p-12" data-reveal>
           <p className="text-lg leading-relaxed text-foreground/80">
-            I'm a <span className="font-semibold text-primary">Computer Science</span> student and aspiring
-            full stack developer. I love turning ideas into clean, responsive web apps with React,
-            JavaScript and modern tools — and I'm actively seeking a <span className="font-semibold text-primary">software developer internship</span> where
-            I can contribute, learn fast, and grow into a well-rounded engineer.
+            I'm a <span className="font-semibold text-primary">Bachelor of Computer Science</span> graduate
+            passionate about software development and web technologies. I enjoy building responsive web
+            applications using React, Java, JavaScript, SQL, HTML, CSS, and Python. I'm a quick learner,
+            enjoy solving problems, and I'm excited to start my career in the IT industry.
           </p>
           <div className="mt-8 grid gap-4 sm:grid-cols-4">
             {[
@@ -191,10 +193,10 @@ function About() {
 }
 
 const SKILL_GROUPS = [
-  { icon: Code2, title: "Programming", items: ["C", "Java", "Python"] },
-  { icon: Globe, title: "Web", items: ["HTML", "CSS", "JavaScript", "React"] },
-  { icon: Wrench, title: "Tools", items: ["GitHub", "VS Code", "Git", "Vercel"] },
-  { icon: Users, title: "Soft Skills", items: ["Problem Solving", "Communication", "Leadership"] },
+  { icon: Code2, title: "Programming Languages", items: ["Java", "JavaScript", "Python", "SQL", "HTML", "CSS"] },
+  { icon: Globe, title: "Frameworks & Libraries", items: ["React"] },
+  { icon: Wrench, title: "Tools", items: ["Git", "GitHub", "VS Code"] },
+  { icon: Users, title: "Soft Skills", items: ["Communication", "Teamwork", "Problem Solving", "Quick Learning", "Time Management", "Adaptability"] },
 ];
 
 function Skills() {
@@ -266,10 +268,15 @@ function Projects() {
                     <span key={t} className="rounded-full bg-teal/10 px-3 py-1 text-xs font-semibold text-teal">{t}</span>
                   ))}
                 </div>
-                <div className="mt-6 flex gap-3">
+                <div className="mt-6 flex flex-wrap gap-3">
                   <a href={p.github} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-transform hover:-translate-y-0.5 hover:bg-primary/90">
                     <Github className="h-4 w-4" /> GitHub
                   </a>
+                  {p.demo && p.demo !== "#" && (
+                    <a href={p.demo} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-teal bg-white px-4 py-2 text-sm font-semibold text-teal transition-transform hover:-translate-y-0.5 hover:bg-teal hover:text-teal-foreground">
+                      <ExternalLink className="h-4 w-4" /> Live Demo
+                    </a>
+                  )}
                 </div>
               </div>
             </article>
@@ -451,7 +458,7 @@ function Contact() {
   const cards = [
     { icon: Mail, label: "Email", value: EMAIL, href: `mailto:${EMAIL}` },
     { icon: Phone, label: "Phone", value: "8074721377", href: "tel:8074721377" },
-    { icon: MapPin, label: "Location", value: "Visakhapatnam", href: "#" },
+    { icon: MapPin, label: "Location", value: "Visakhapatnam, India", href: "#" },
     { icon: Linkedin, label: "LinkedIn", value: "LinkedIn Profile", href: LINKEDIN, external: true },
     { icon: Github, label: "GitHub", value: "GitHub Profile", href: GITHUB, external: true },
   ];
@@ -511,7 +518,7 @@ function Footer() {
           <a href={GITHUB} target="_blank" rel="noreferrer" aria-label="GitHub" className="transition-colors hover:text-teal">
             <Github className="h-5 w-5" />
           </a>
-          <p className="hidden sm:block">Built with React & Tailwind.</p>
+          <p className="hidden sm:block">Built with React & Lovable.</p>
         </div>
       </div>
     </footer>
