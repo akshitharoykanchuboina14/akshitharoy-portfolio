@@ -268,10 +268,15 @@ function Projects() {
                     <span key={t} className="rounded-full bg-teal/10 px-3 py-1 text-xs font-semibold text-teal">{t}</span>
                   ))}
                 </div>
-                <div className="mt-6 flex gap-3">
+                <div className="mt-6 flex flex-wrap gap-3">
                   <a href={p.github} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-transform hover:-translate-y-0.5 hover:bg-primary/90">
                     <Github className="h-4 w-4" /> GitHub
                   </a>
+                  {p.demo && p.demo !== "#" && (
+                    <a href={p.demo} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-teal bg-white px-4 py-2 text-sm font-semibold text-teal transition-transform hover:-translate-y-0.5 hover:bg-teal hover:text-teal-foreground">
+                      <ExternalLink className="h-4 w-4" /> Live Demo
+                    </a>
+                  )}
                 </div>
               </div>
             </article>
