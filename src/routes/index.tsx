@@ -458,7 +458,7 @@ function Contact() {
   const cards = [
     { icon: Mail, label: "Email", value: EMAIL, href: `mailto:${EMAIL}` },
     { icon: Phone, label: "Phone", value: "8074721377", href: "tel:8074721377" },
-    { icon: MapPin, label: "Location", value: "Visakhapatnam", href: "#" },
+    { icon: MapPin, label: "Location", value: "Visakhapatnam, India", href: "#" },
     { icon: Linkedin, label: "LinkedIn", value: "LinkedIn Profile", href: LINKEDIN, external: true },
     { icon: Github, label: "GitHub", value: "GitHub Profile", href: GITHUB, external: true },
   ];
