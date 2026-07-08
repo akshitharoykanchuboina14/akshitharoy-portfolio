@@ -93,11 +93,13 @@ function Hero() {
             <span className="bg-gradient-to-r from-teal to-sky bg-clip-text text-transparent">Kanchuboina</span>
           </h1>
           <p className="mt-4 text-base font-semibold uppercase tracking-wide text-primary/70 sm:text-lg">
-            Computer Science Graduate <span className="text-teal">•</span> Aspiring Software Developer
+            Bachelor of Computer Science Graduate <span className="text-teal">•</span> Aspiring Software Developer
           </p>
           <p className="mt-5 max-w-xl text-base leading-relaxed text-foreground/80 sm:text-lg">
-            I build clean, responsive web applications with React and modern tooling. Passionate about
-            writing quality code and ready to contribute as a software developer.
+            I'm a Bachelor of Computer Science graduate passionate about software development and web
+            technologies. I enjoy building responsive web applications using React, Java, JavaScript, SQL,
+            HTML, CSS, and Python. I'm eager to learn, improve my skills, and contribute to a professional
+            software development team.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a href="#projects" className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-elegant transition-transform hover:-translate-y-0.5">
