@@ -5,6 +5,7 @@ import {
   GraduationCap, Briefcase, Award, Trophy, MapPin, ArrowRight, Sparkles, Phone,
 } from "lucide-react";
 import profileImage from "@/assets/akshitha-profile-v5.png.asset.json";
+import resumePdf from "@/assets/Kanchuboina_Akshitha_Roy.pdf.asset.json";
 import objectDetectionImg from "@/assets/project-object-detection.jpg";
 import restaurantImg from "@/assets/project-restaurant.jpg";
 
@@ -23,7 +24,7 @@ export const Route = createFileRoute("/")({
 const EMAIL = "akshitharoy1405@gmail.com";
 const GITHUB = "https://github.com/akshitharoykanchuboina14";
 const LINKEDIN = "https://www.linkedin.com/in/akshitharoy-kanchuboina-6102b8326";
-const RESUME = "https://drive.google.com/file/d/1ZNNbQTxyVGf6TpakssAKMw1Tflz4CTIn/view?usp=drivesdk";
+const RESUME = resumePdf.url;
 
 function useReveal() {
   const ref = useRef<HTMLDivElement>(null);
@@ -102,7 +103,7 @@ function Hero() {
             <a href="#projects" className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-elegant transition-transform hover:-translate-y-0.5">
               View Projects <ArrowRight className="h-4 w-4" />
             </a>
-            <a href={RESUME} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-white px-5 py-3 text-sm font-semibold text-primary transition-colors hover:border-teal hover:text-teal">
+            <a href={RESUME} download="Kanchuboina_Akshitha_Roy.pdf" className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-white px-5 py-3 text-sm font-semibold text-primary transition-colors hover:border-teal hover:text-teal">
               <Download className="h-4 w-4" /> Download Resume
             </a>
             <a href="#contact" className="inline-flex items-center gap-2 rounded-full bg-teal px-5 py-3 text-sm font-semibold text-teal-foreground shadow-soft transition-transform hover:-translate-y-0.5">
@@ -485,8 +486,7 @@ function Contact() {
             <div className="mt-8">
               <a
                 href={RESUME}
-                target="_blank"
-                rel="noreferrer"
+                download="Kanchuboina_Akshitha_Roy.pdf"
                 className="inline-flex items-center gap-2 rounded-full bg-teal px-6 py-3 text-sm font-semibold text-teal-foreground shadow-soft transition-transform hover:-translate-y-0.5"
               >
                 <Download className="h-4 w-4" /> Download Resume
