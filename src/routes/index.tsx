@@ -193,10 +193,10 @@ function About() {
 }
 
 const SKILL_GROUPS = [
-  { icon: Code2, title: "Programming", items: ["C", "Java", "Python"] },
-  { icon: Globe, title: "Web", items: ["HTML", "CSS", "JavaScript", "React"] },
-  { icon: Wrench, title: "Tools", items: ["GitHub", "VS Code", "Git", "Vercel"] },
-  { icon: Users, title: "Soft Skills", items: ["Problem Solving", "Communication", "Leadership"] },
+  { icon: Code2, title: "Programming Languages", items: ["Java", "JavaScript", "Python", "SQL", "HTML", "CSS"] },
+  { icon: Globe, title: "Frameworks & Libraries", items: ["React"] },
+  { icon: Wrench, title: "Tools", items: ["Git", "GitHub", "VS Code"] },
+  { icon: Users, title: "Soft Skills", items: ["Communication", "Teamwork", "Problem Solving", "Quick Learning", "Time Management", "Adaptability"] },
 ];
 
 function Skills() {
