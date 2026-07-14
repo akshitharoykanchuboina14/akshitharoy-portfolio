@@ -242,7 +242,7 @@ const PROJECTS = [
     img: restaurantImg,
     tech: ["HTML", "CSS", "JavaScript"],
     github: "https://github.com/akshitharoykanchuboina14/Restaurant-website",
-    demo: "https://akshitharoykanchuboina14.github.io/Restaurant-website/",
+    demo: "#",
   },
 ];
 
@@ -326,8 +326,8 @@ function Education() {
   const ref = useReveal();
   const items: TLItem[] = [
     { year: "2023 — 2026", title: "Bachelor's Degree, Computer Science", place: "Aditya Degree College", detail: "CGPA: 9.0 / 10" },
-    { year: "2021 — 2023", title: "MPC (Intermediate)", place: "Sri Chaitanya Junior College" },
-    { year: "2020 — 2021", title: "Secondary Education", place: "Ravindra Bharathi School" },
+    { year: "2021 — 2023", title: "MPC (Intermediate)", place: "Sri Chaitanya Junior College", detail: "CGPA: 8.12 / 10" },
+    { year: "2020 — 2021", title: "Secondary Education", place: "Ravindra Bharathi School", detail: "CGPA: 9.8 / 10" },
   ];
   return (
     <section id="education" className="section-pad bg-secondary/40" ref={ref}>
