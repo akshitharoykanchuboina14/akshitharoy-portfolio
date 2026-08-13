@@ -4,8 +4,7 @@ import {
   Download, Mail, Github, Linkedin, ExternalLink, Code2, Globe, Wrench, Users,
   GraduationCap, Briefcase, Award, Trophy, MapPin, ArrowRight, Sparkles, Phone,
 } from "lucide-react";
-import profileImage from "@/assets/akshitha-profile-v5.png.asset.json";
-import resumePdf from "@/assets/Kanchuboina_Akshitha_Roy.pdf.asset.json";
+import profileImage from "@/assets/akshitha-profile-v5.png";
 import objectDetectionImg from "@/assets/project-object-detection.jpg";
 import restaurantImg from "@/assets/project-restaurant.jpg";
 
@@ -24,7 +23,7 @@ export const Route = createFileRoute("/")({
 const EMAIL = "akshitharoy1405@gmail.com";
 const GITHUB = "https://github.com/akshitharoykanchuboina14";
 const LINKEDIN = "https://www.linkedin.com/in/akshitharoy-kanchuboina-6102b8326";
-const RESUME = resumePdf.url;
+const RESUME = "/Kanchuboina_Akshitha_Roy.pdf";
 
 function useReveal() {
   const ref = useRef<HTMLDivElement>(null);
@@ -130,7 +129,7 @@ function Hero() {
             <div className="relative float-slow rounded-full bg-white p-2 shadow-elegant ring-1 ring-border">
               <div className="overflow-hidden rounded-full bg-white">
                 <img
-                  src={profileImage.url}
+                  src={profileImage}
                   alt="Akshitha Roy Kanchuboina"
                   width={220}
                   height={220}
